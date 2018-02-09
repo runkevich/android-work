@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="button1">Кнопка 1</string>
+
+    <string name="text_view_1">Текст 1</string>
+
+    <string name="text_view_2">Текст 1</string>
+</resources>
