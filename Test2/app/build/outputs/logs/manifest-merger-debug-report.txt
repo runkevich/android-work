@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\c87f87a4576e6c255c7aa9c1b9f12242\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\2ee503a2d9383f05b2f4ee459e69640f\AndroidManifest.xml:17:1-22:12
@@ -12,25 +12,25 @@ MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Eka\.g
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fcac14502a593c02453ea6a11bf4db39\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
 	package
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:2:5-40
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-33:12
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-28:12
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:4:5-32:19
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:4:5-27:19
 	android:supportsRtl
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:9:9-35
 	android:label
@@ -43,10 +43,10 @@ ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:4:5-32:19
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:5:9-35
 	android:theme
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:10:9-40
-activity#com.runkevich8.gmail.test.classwork.classwork1.Classwork1Activity
+activity#com.runkevich8.gmail.test.homework.hw1.Homework1Activity
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:12:19-74
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:12:19-65
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
@@ -57,10 +57,12 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:17:17-76
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:17:27-74
-activity#com.runkevich8.gmail.test.homework.hw1.Homework1Activity
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:9-30:20
+activity#com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:9-25:20
+	android:parentActivityName
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:23:13-82
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:19-65
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:19-74
 uses-sdk
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml

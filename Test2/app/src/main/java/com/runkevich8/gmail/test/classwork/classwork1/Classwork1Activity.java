@@ -1,15 +1,17 @@
 package com.runkevich8.gmail.test.classwork.classwork1;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.runkevich8.gmail.test.R;
+import com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity;
+import com.runkevich8.gmail.test.classwork.classwork2.Singleton;
 
 public class Classwork1Activity extends AppCompatActivity{
 
@@ -27,8 +29,18 @@ public class Classwork1Activity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(Classwork1Activity.this,
-                        "Hello", Toast.LENGTH_SHORT).show();
+                Singleton singleton = Singleton.getInstance();
+                singleton.text = "Hoooooooooooooooo";
+
+                Intent intent = new Intent(Classwork1Activity.this,
+                        Classwork2Activity.class);
+                intent.putExtra(Classwork2Activity.KEY_TEXT,"Hello-Hello!");
+
+
+
+                startActivity(intent);
+               // finish(); удаляет историю после открытия новой активити
+               //   onBackPressed(); //1 способ возврата или finish()
 
             }
         });

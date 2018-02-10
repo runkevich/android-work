@@ -17,12 +17,16 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.runkevich8.gmail.test.classwork1.Classwork1Activity" >
+        <activity android:name="com.runkevich8.gmail.test.homework.hw1.Homework1Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity"
+            android:parentActivityName="com.runkevich8.gmail.test.classwork.classwork1.Classwork1Activity" >
         </activity>
 
         <provider
