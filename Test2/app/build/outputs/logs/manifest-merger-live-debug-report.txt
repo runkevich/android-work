@@ -43,10 +43,10 @@ ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:4:5-37:19
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:5:9-35
 	android:theme
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:10:9-40
-activity#com.runkevich8.gmail.test.homework.hw1.HomeworkMain
+activity#com.runkevich8.gmail.test.homework.HomeworkMain
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:12:19-60
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:12:19-56
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
@@ -60,13 +60,13 @@ ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:17:17-76
 activity#com.runkevich8.gmail.test.homework.hw2.Homework2Activity
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:9-25:20
 	android:parentActivityName
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:23:13-68
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:23:13-64
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:19-65
 activity#com.runkevich8.gmail.test.homework.hw1.Homework1Activity
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:26:9-29:20
 	android:parentActivityName
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:27:13-68
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:27:13-64
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:26:19-65
 activity#com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity

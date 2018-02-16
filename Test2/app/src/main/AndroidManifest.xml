@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name=".homework.hw1.HomeworkMain">
+        <activity android:name=".homework.HomeworkMain">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,11 +20,11 @@
         </activity>
 
         <activity android:name=".homework.hw2.Homework2Activity"
-            android:parentActivityName=".homework.hw1.HomeworkMain">
+            android:parentActivityName=".homework.HomeworkMain">
 
         </activity>
         <activity android:name=".homework.hw1.Homework1Activity"
-            android:parentActivityName=".homework.hw1.HomeworkMain">
+            android:parentActivityName=".homework.HomeworkMain">
 
         </activity>
 
