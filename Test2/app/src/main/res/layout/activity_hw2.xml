@@ -230,6 +230,76 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="4"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="40dp"
+        android:id="@+id/dania"
+        android:layout_below="@+id/tailand">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ff0000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ff0000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:background="#ffffff">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ff0000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ff0000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </RelativeLayout>
 </ScrollView>
