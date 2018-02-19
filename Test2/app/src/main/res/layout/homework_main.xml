@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#828382">
+    android:background="#e9e9e9">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hw1"
-        android:background="#6e3474"
+        android:background="@drawable/button_selector"
         android:layout_margin="5dp"
         android:layout_gravity="center"
         />
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hw2"
-        android:background="#6e3474"
+        android:background="@drawable/button_selector"
         android:layout_margin="5dp"/>
 
         <Button
@@ -38,9 +38,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hw3"
-            android:background="#6e3474"
+            android:background="@drawable/button_selector"
             android:layout_margin="5dp"/>
 
+        <Button
+            android:id="@+id/hw_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hw4"
+            android:background="@drawable/button_selector"
+            android:layout_margin="5dp"/>
     </LinearLayout>
 
 </ScrollView>

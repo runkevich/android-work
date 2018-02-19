@@ -18,6 +18,10 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".homework.hw4.Homework4Activity"
+            android:parentActivityName=".homework.HomeworkMain">
+
+        </activity>
         <activity android:name=".homework.hw3.Homework3Activity"
             android:parentActivityName=".homework.HomeworkMain">
 

@@ -12,12 +12,14 @@ import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
 import com.runkevich8.gmail.test.homework.hw3.Homework3Activity;
+import com.runkevich8.gmail.test.homework.hw4.Homework4Activity;
 
 public class HomeworkMain extends AppCompatActivity {
 
     private Button hw1;
     private Button hw2;
     private Button hw3;
+    private Button hw4;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class HomeworkMain extends AppCompatActivity {
         hw1 = findViewById(R.id.hw_1);
         hw2 = findViewById(R.id.hw_2);
         hw3 = findViewById(R.id.hw_3);
+        hw4 = findViewById(R.id.hw_4);
 
 
         View.OnClickListener hw1Click = new View.OnClickListener() {
@@ -66,6 +69,21 @@ public class HomeworkMain extends AppCompatActivity {
         };
 
         hw3.setOnClickListener(hw3Click);
+
+
+
+        View.OnClickListener hw4Click = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeworkMain.this,
+                        Homework4Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.diagonaltranslate,R.anim.alpha);
+            }
+        };
+
+        hw4.setOnClickListener(hw4Click);
+
     }
 }
 

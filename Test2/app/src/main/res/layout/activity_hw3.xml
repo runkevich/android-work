@@ -3,7 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:padding="@dimen/main_activity_margin">
+    android:padding="@dimen/main_activity_margin"
+    android:background="#e9e9e9">
 
     <Button
         android:id="@+id/button1_hw3"
