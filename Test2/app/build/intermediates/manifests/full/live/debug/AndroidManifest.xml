@@ -51,6 +51,14 @@
             android:parentActivityName="com.runkevich8.gmail.test.classwork.classwork1.Classwork1Activity" >
         </activity>
 
+        <receiver android:name="com.runkevich8.gmail.test.classwork.classwork5.MyReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.runkevich8.gmail.test.classwork.classwork5.MyService" />
+        <service android:name="com.runkevich8.gmail.test.classwork.classwork5.MyIntentService" />
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
             android:enabled="false"

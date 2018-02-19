@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.runkevich8.gmail.test">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -10,13 +11,11 @@
         android:theme="@style/AppTheme" >
 
         <activity android:name=".homework.HomeworkMain">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
         <activity android:name=".homework.hw4.Homework4Activity"
             android:parentActivityName=".homework.HomeworkMain">
@@ -42,5 +41,14 @@
 
         </activity>
 
+
+        <receiver android:name=".classwork.classwork5.MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".classwork.classwork5.MyService" />
+        <service android:name=".classwork.classwork5.MyIntentService" />
     </application>
 </manifest>
