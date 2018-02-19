@@ -33,6 +33,14 @@
         android:background="#6e3474"
         android:layout_margin="5dp"/>
 
+        <Button
+            android:id="@+id/hw_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hw3"
+            android:background="#6e3474"
+            android:layout_margin="5dp"/>
+
     </LinearLayout>
 
 </ScrollView>

@@ -11,11 +11,13 @@ import android.widget.Button;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
+import com.runkevich8.gmail.test.homework.hw3.Homework3Activity;
 
 public class HomeworkMain extends AppCompatActivity {
 
     private Button hw1;
     private Button hw2;
+    private Button hw3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class HomeworkMain extends AppCompatActivity {
 
         hw1 = findViewById(R.id.hw_1);
         hw2 = findViewById(R.id.hw_2);
+        hw3 = findViewById(R.id.hw_3);
 
 
         View.OnClickListener hw1Click = new View.OnClickListener() {
@@ -49,6 +52,20 @@ public class HomeworkMain extends AppCompatActivity {
         };
 
         hw2.setOnClickListener(hw2Click);
+
+
+
+
+        View.OnClickListener hw3Click = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeworkMain.this,
+                        Homework3Activity.class);
+                startActivity(intent);
+            }
+        };
+
+        hw3.setOnClickListener(hw3Click);
     }
 }
 

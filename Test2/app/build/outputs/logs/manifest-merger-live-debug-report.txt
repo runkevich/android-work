@@ -1,36 +1,52 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:17:1-61:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:2:1-13:12
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:17:1-25:12
 MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\c87f87a4576e6c255c7aa9c1b9f12242\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\2ee503a2d9383f05b2f4ee459e69640f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\71ab0c186bdd057bdb3aca7353118e3d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\0233d89187695d9ed029b77d0456b714\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fcac14502a593c02453ea6a11bf4db39\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
 	package
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:2:5-40
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-38:12
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:3:5-67
+	android:name
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:3:22-64
 application
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:4:5-37:19
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:4:5-41:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:26:5-59:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:26:5-59:19
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:11:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:23:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:23:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:9:5-20
 	android:supportsRtl
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:9:9-35
 	android:label
@@ -57,30 +73,42 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:17:17-76
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:17:27-74
-activity#com.runkevich8.gmail.test.homework.hw2.Homework2Activity
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:9-25:20
+activity#com.runkevich8.gmail.test.homework.hw3.Homework3Activity
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:21:9-24:20
 	android:parentActivityName
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:23:13-64
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:13-64
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:22:19-65
-activity#com.runkevich8.gmail.test.homework.hw1.Homework1Activity
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:21:19-65
+activity#com.runkevich8.gmail.test.homework.hw2.Homework2Activity
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:26:9-29:20
 	android:parentActivityName
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:27:13-64
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:26:19-65
-activity#com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:32:9-35:20
+activity#com.runkevich8.gmail.test.homework.hw1.Homework1Activity
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:30:9-33:20
 	android:parentActivityName
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:33:13-82
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:31:13-64
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:32:19-74
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:30:19-65
+activity#com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:36:9-39:20
+	android:parentActivityName
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:37:13-82
+	android:name
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:36:19-74
 uses-sdk
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:7:5-9:41
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:21:5-44
+MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:21:5-44
 MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\c87f87a4576e6c255c7aa9c1b9f12242\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\c87f87a4576e6c255c7aa9c1b9f12242\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\2ee503a2d9383f05b2f4ee459e69640f\AndroidManifest.xml:20:5-44
@@ -89,6 +117,8 @@ MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Eka\.
 MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\71ab0c186bdd057bdb3aca7353118e3d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\0233d89187695d9ed029b77d0456b714\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\0233d89187695d9ed029b77d0456b714\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:20:5-44
@@ -105,3 +135,62 @@ INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:23:5-80
+IMPLIED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-42:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:23:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:24:22-78
+service#com.squareup.leakcanary.internal.HeapAnalyzerService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:27:9-30:45
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:30:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:29:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:28:13-80
+service#com.squareup.leakcanary.DisplayLeakService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:31:9-34:45
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:34:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:32:13-70
+activity#com.squareup.leakcanary.internal.DisplayLeakActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:36:9-49:20
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:41:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:38:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:40:13-71
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:39:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:43:13-63
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:42:13-76
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:37:13-80
+activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:50:9-58:68
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:56:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:52:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:55:13-82
+	android:excludeFromRecents
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:53:13-46
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:54:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:58:13-65
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:57:13-76
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:51:13-93
