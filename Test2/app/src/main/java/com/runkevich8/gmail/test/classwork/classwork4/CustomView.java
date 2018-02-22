@@ -93,7 +93,8 @@ public class CustomView extends View {
 
        // canvas.drawRect(rect,paintCustomView);
        //canvas.save();
-      //  canvas.rotate(90,cx,cy);
+       canvas.rotate(90,cx,cy);
+      // canvas.drawLine(0,0,20,20,paintCustomView);
     }
 
     @Override

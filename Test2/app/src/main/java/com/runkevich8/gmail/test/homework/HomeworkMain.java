@@ -13,6 +13,7 @@ import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
 import com.runkevich8.gmail.test.homework.hw3.Homework3Activity;
 import com.runkevich8.gmail.test.homework.hw4.Homework4Activity;
+import com.runkevich8.gmail.test.homework.hw5.Homework5Activity;
 
 public class HomeworkMain extends AppCompatActivity {
 
@@ -20,6 +21,8 @@ public class HomeworkMain extends AppCompatActivity {
     private Button hw2;
     private Button hw3;
     private Button hw4;
+    private Button hw5;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class HomeworkMain extends AppCompatActivity {
         hw2 = findViewById(R.id.hw_2);
         hw3 = findViewById(R.id.hw_3);
         hw4 = findViewById(R.id.hw_4);
+        hw5 = findViewById(R.id.hw_5);
 
 
         View.OnClickListener hw1Click = new View.OnClickListener() {
@@ -84,6 +88,19 @@ public class HomeworkMain extends AppCompatActivity {
 
         hw4.setOnClickListener(hw4Click);
 
+
+
+
+        View.OnClickListener hw5Click = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeworkMain.this,
+                        Homework5Activity.class);
+                startActivity(intent);
+            }
+        };
+
+        hw5.setOnClickListener(hw5Click);
     }
 }
 
