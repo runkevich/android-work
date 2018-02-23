@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.runkevich8.gmail.test">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name=".homework.HomeworkMain">
+        <activity android:name=".classwork.classwork6.Classwork6Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <receiver android:name=".homework.hw5.MyReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANG" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name=".homework.hw5.Homework5Activity"
             android:parentActivityName=".homework.HomeworkMain">
