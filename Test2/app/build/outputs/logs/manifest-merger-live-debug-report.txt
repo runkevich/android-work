@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:17:1-61:12
 MERGED from [com.android.support:design:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\b1270f7bed8f94cebcaa90f17df0d83b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:17:1-22:12
@@ -21,22 +21,22 @@ MERGED from [com.android.support:transition:27.0.2] C:\Users\Eka\.gradle\caches\
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fcac14502a593c02453ea6a11bf4db39\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
-INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
+INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
 	package
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:2:5-51
 	android:versionCode
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:11-69
@@ -53,7 +53,7 @@ ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:6:5-78
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:7:5-67:19
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:7:5-69:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:26:5-59:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:26:5-59:19
 MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:11:5-20
@@ -74,10 +74,10 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\ca
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:13:9-40
-activity#com.runkevich8.gmail.test.classwork.classwork6.Classwork6Activity
+activity#com.runkevich8.gmail.test.homework.HomeworkMain
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:15:19-74
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:15:19-56
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
@@ -134,24 +134,28 @@ ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:53:9-56:2
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:54:13-82
 	android:name
 		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:53:19-74
+activity#com.runkevich8.gmail.test.classwork.classwork6.Classwork6Activity
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:57:9-59:20
+	android:name
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:57:19-74
 receiver#com.runkevich8.gmail.test.classwork.classwork5.MyReceiver
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:59:9-63:20
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:61:9-65:20
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:59:19-66
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:61:19-66
 intent-filter#android.intent.action.AIRPLANE_MODE
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:60:13-62:29
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:62:13-64:29
 action#android.intent.action.AIRPLANE_MODE
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:61:17-78
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:63:17-78
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:61:25-75
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:63:25-75
 service#com.runkevich8.gmail.test.classwork.classwork5.MyService
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:65:9-67
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:67:9-67
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:65:18-64
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:67:18-64
 service#com.runkevich8.gmail.test.classwork.classwork5.MyIntentService
-ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:66:9-73
+ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:68:9-73
 	android:name
-		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:66:18-70
+		ADDED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:68:18-70
 uses-sdk
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
@@ -202,7 +206,7 @@ INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:23:5-80
-IMPLIED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-68:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
+IMPLIED from D:\Java\android-work\Test2\app\src\main\AndroidManifest.xml:1:1-70:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:23:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE

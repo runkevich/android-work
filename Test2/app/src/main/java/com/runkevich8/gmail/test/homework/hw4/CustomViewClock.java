@@ -5,20 +5,25 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class CustomViewClock extends View {
     private Paint paintCustomViewClock;
     private float radius;
     private float cx;
     private float cy;
+    private int mPadding = 0;
+    private Rect mRect = new Rect();
+    private int[] mClockHours = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 
     public CustomViewClock(Context context) {
         super(context);
@@ -56,6 +61,7 @@ public class CustomViewClock extends View {
         cy = h/2;
         radius = w>h ?cx/2 : cy/2;
 
+        mPadding = (int) (radius*0.1);
     }
 
     @Override
@@ -75,41 +81,55 @@ public class CustomViewClock extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawCircle(cx,cy,radius, paintCustomViewClock);
 
-        paintCustomViewClock.setColor(Color.BLACK);
-        paintCustomViewClock.setStrokeWidth(10);
+        paintCustomViewClock.setColor(Color.GRAY);
+        canvas.drawCircle(cx,cy,radius+mPadding, paintCustomViewClock);
 
-        for (int i = 0; i < 12; i++) {
-            canvas.rotate(30, cx, cy);
-            canvas.drawLine(cx / 4, cy, cx / 6, cy, paintCustomViewClock);
-            paintCustomViewClock.setTextSize(60);
-//            if (i == 2) {
-//               canvas.drawText("0",cx/4,cy,paintCustomViewClock);
-//            }
-//            if (i == 5) {
-//                canvas.drawText("3",cx/4,cy,paintCustomViewClock);
-//            }
-//            if (i == 8) {
-//               canvas.drawText("6",cx/4,cy,paintCustomViewClock);
-//            }
-//            if (i == 11) {
-//                canvas.drawText("9",cx/4,cy,paintCustomViewClock);
-//            }
+        int fontSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 14, getResources().getDisplayMetrics());
+        paintCustomViewClock.setTextSize(fontSize);
+
+        for (int hour : mClockHours) {
+            String tmp = String.valueOf(hour);
+            paintCustomViewClock.getTextBounds(tmp, 0, tmp.length(), mRect);
+
+            paintCustomViewClock.setColor(Color.BLACK);
+            double angle = Math.PI / 6 * (hour - 3);
+            float x = (float) (cx + Math.cos(angle) * radius - mRect.width()/2);
+            float y = (float) (cy + Math.sin(angle) * radius + mRect.height()/2);
+
+          canvas.drawText(String.valueOf(hour), x, y, paintCustomViewClock);
+
         }
 
-        canvas.drawText("9",cx/4,cy,paintCustomViewClock);
-        canvas.drawText("3",(radius+(cx/2)+(cx/3)+(cx/15)),cy,paintCustomViewClock);
-        canvas.drawText("12",cx,cy-(cy/3)-(cy/12),paintCustomViewClock);
-        canvas.drawText("6",cx,cy+(cy/3)+(cy/10),paintCustomViewClock);
+        paintCustomViewClock.setStrokeWidth(8);
+        for (int i = 0; i < 12; i++) {
+            if (i%3==0){
+                paintCustomViewClock.setColor(Color.BLUE);
+                canvas.drawLine(cx-radius-mPadding, cy, cx-radius-mPadding/3, cy, paintCustomViewClock);
+            } else {
+                paintCustomViewClock.setColor(Color.BLACK);
+                canvas.drawLine(cx-radius-mPadding, cy, cx-radius-mPadding/2, cy, paintCustomViewClock);
+            }
 
+            canvas.rotate(30, cx, cy);
+        }
         canvas.save();
-        Date currentTime = new Date();
+        Calendar calendar = Calendar.getInstance();
+        float hour = calendar.get(Calendar.HOUR_OF_DAY);
+        hour = hour > 12 ? hour - 12 : hour;
 
-        canvas.rotate(30*currentTime.getHours()+currentTime.getMinutes()/3,cx,cy);
-        canvas.drawLine(cx,cy,cx,cy-(radius*0.6f),paintCustomViewClock);
-        canvas.restore();
+        drawHandLine(canvas, (hour + calendar.get(Calendar.MINUTE) / 60) * 5f, true, false); // draw hours
+        drawHandLine(canvas, calendar.get(Calendar.MINUTE), false, false); // draw minutes
+        drawHandLine(canvas, calendar.get(Calendar.SECOND), false, true); // draw seconds
 
+        postInvalidateDelayed(500);
+        invalidate();
+    }
+    private void drawHandLine(Canvas canvas, double moment, boolean isHour, boolean isSecond) {
+        double angle = Math.PI * moment / 30 - Math.PI / 2;
+        int handRadius = (int) (isHour ? radius - mPadding*5 : radius - mPadding*2);
+        if (isSecond) paintCustomViewClock.setColor(Color.BLUE);
+        canvas.drawLine(cx, cy, (float) (cx+ Math.cos(angle) * handRadius), (float) (cy + Math.sin(angle) * handRadius), paintCustomViewClock);
     }
 
     @Override

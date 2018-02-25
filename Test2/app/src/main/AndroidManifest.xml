@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name=".classwork.classwork6.Classwork6Activity">
+        <activity android:name=".homework.HomeworkMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -54,7 +54,9 @@
             android:parentActivityName=".classwork.classwork1.Classwork1Activity">
 
         </activity>
+        <activity android:name=".classwork.classwork6.Classwork6Activity">
 
+        </activity>
 
         <receiver android:name=".classwork.classwork5.MyReceiver">
             <intent-filter>
