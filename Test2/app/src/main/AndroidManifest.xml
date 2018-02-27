@@ -25,6 +25,10 @@
                 <action android:name="android.net.wifi.STATE_CHANG" />
             </intent-filter>
         </receiver>
+<activity android:name=".classwork.classwork7.Classwork7Activity"
+    android:parentActivityName=".homework.HomeworkMain">
+
+</activity>
 
         <activity android:name=".homework.hw5.Homework5Activity"
             android:parentActivityName=".homework.HomeworkMain">

@@ -40,6 +40,10 @@
         </receiver>
 
         <activity
+            android:name="com.runkevich8.gmail.test.classwork.classwork7.Classwork7Activity"
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
+        </activity>
+        <activity
             android:name="com.runkevich8.gmail.test.homework.hw5.Homework5Activity"
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
         </activity>
