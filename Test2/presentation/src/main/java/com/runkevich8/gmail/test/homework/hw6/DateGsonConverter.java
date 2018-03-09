@@ -36,13 +36,6 @@ public class DateGsonConverter implements JsonDeserializer<Date> {
             }
 
         }
-
-        //_________в статик метод оформить
-
         return null;
-    }
-
-    public void parseDate(String format){
-        //_________в статик метод оформить
     }
 }

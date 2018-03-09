@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="myEntity"
+            type="com.runkevich8.gmail.test.classwork.classwork8.MyEntity" />
+
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+<TextView
+    android:id="@+id/textView_cw8"
+    android:textSize="40sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@{myEntity.text2}"/>
+
+    <Button
+        android:id="@+id/button_cw8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="@{myEntity.buttonVisibilite? View.VISIBLE : View.GONE }"
+        android:text="@{myEntity.textButton}"
+        android:background="@drawable/button_selector"
+        android:layout_margin="5dp"
+        android:onClick="@{myEntity::buttonClick}"/>
 </LinearLayout>
+</layout>

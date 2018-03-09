@@ -67,43 +67,5 @@ public class Homework5Activity extends AppCompatActivity {
     }
 
 
-//
-//
-//
-//    private BroadcastReceiver receiver = new BroadcastReceiver() {
-//        public void onReceive(Context context, Intent intent) {
-//
-//            NetworkInfo info = getNetworkInfo(context);
-//            if (info != null && info.isConnected()) {
-//                isConnected = true;
-//                MESSAGE = "Wifi подключен";
-//             //   updateFloatingButton();
-//            } else {
-//                isConnected = false;
-//                MESSAGE = "Wifi выключен";
-//                //updateFloatingButton();
-//            }
-//        }
-//    };
-//    private NetworkInfo getNetworkInfo(Context context) {
-//        ConnectivityManager connManager = (ConnectivityManager)
-//                context.getSystemService(Context.CONNECTIVITY_SERVICE);
-//        return connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-//    }
-//    protected void onResume() {
-//        super.onResume();
-//        if (!isReceiverRegistered) {
-//            isReceiverRegistered = true;
-//            registerReceiver(receiver, new IntentFilter("android.net.wifi.STATE_CHANGE"));
-//        }
-//    }
-//    protected void onPause() {
-//        super.onPause();
-//        if (isReceiverRegistered) {
-//            isReceiverRegistered = false;
-//            unregisterReceiver(receiver);
-//        }
-//    }
-//
 
 }

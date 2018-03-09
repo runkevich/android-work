@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.runkevich8.gmail.test.R;
+import com.runkevich8.gmail.test.classwork.classwork8.Classwork8Activity;
 import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
-import com.runkevich8.gmail.test.homework.hw3.Homework3Activity;
 import com.runkevich8.gmail.test.homework.hw4.Homework4Activity;
 import com.runkevich8.gmail.test.homework.hw5.Homework5Activity;
 import com.runkevich8.gmail.test.homework.hw6.Homework6Activity;
@@ -26,6 +26,7 @@ public class HomeworkMain extends AppCompatActivity {
     private Button hw5;
     private Button hw6;
     private Button hw7;
+    private Button hw8;
 
 
     @Override
@@ -40,6 +41,7 @@ public class HomeworkMain extends AppCompatActivity {
         hw5 = findViewById(R.id.hw_5);
         hw6 = findViewById(R.id.hw_6);
         hw7 = findViewById(R.id.hw_7);
+        hw8 = findViewById(R.id.hw_8);
 
 
         View.OnClickListener hw1Click = new View.OnClickListener() {
@@ -73,7 +75,7 @@ public class HomeworkMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeworkMain.this,
-                        Homework3Activity.class);
+                        Homework2Activity.class);
                 startActivity(intent);
             }
         };
@@ -131,6 +133,18 @@ public class HomeworkMain extends AppCompatActivity {
         };
 
         hw7.setOnClickListener(hw7Click);
+
+
+        View.OnClickListener hw8Click = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeworkMain.this,
+                        Classwork8Activity.class);
+                startActivity(intent);
+            }
+        };
+
+        hw8.setOnClickListener(hw8Click);
     }
 }
 

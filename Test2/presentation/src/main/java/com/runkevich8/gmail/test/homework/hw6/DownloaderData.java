@@ -1,86 +1,40 @@
 package com.runkevich8.gmail.test.homework.hw6;
 
+import android.content.Context;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class DownloaderData implements Runnable{
+public class DownloaderData {
 
-    private static InputStream inputStream = null;
-    private static FileOutputStream fileOutputStream = null;
-    private Object object;
-    private String link;
-    private String fileName;
+        public  void download(String urlAdress,Context context) {
 
-    public DownloaderData(String link, String fileName, Object object) {
-        this.link = link;
-        this.fileName = fileName;
-        this.object = object;
-    }
+            try {
+                URL url = new URL(urlAdress);
 
-    public boolean download() {
-        try {
-            URL url = new URL(link);
-            HttpURLConnection httpURLConnection =
-                    (HttpURLConnection) url.openConnection();
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-            int responseCode = httpURLConnection.getResponseCode();
+                int responseCode = connection.getResponseCode();
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    File file = new File(context.getFilesDir(),"FirstFile.json");
 
-            if (responseCode == HttpURLConnection.HTTP_OK) {
+                    try (InputStream streamIn = connection.getInputStream();
+                         FileOutputStream streamOut = new FileOutputStream(file)) {
 
-                inputStream = httpURLConnection.getInputStream();
-
-                File file = new File(fileName);
-
-                fileOutputStream = new FileOutputStream(file);
-
-                int byteRead = -1;
-                byte[] buffer = new byte[2048];
-                while ((byteRead = inputStream.read(buffer)) != -1) {
-                    fileOutputStream.write(buffer, 0, byteRead);
+                        byte[] buffer = new byte[2048];
+                        int read;
+                        while ((read = streamIn.read(buffer)) != -1) {
+                            streamOut.write(buffer, 0, read);
+                        }
+                    }
+                } else {
+                    return;
                 }
-
-            } else {
-                System.out.println("Данные не найдены, response code = " + responseCode);
-            }
-
-        } catch (Exception e) {
-            System.out.println("Невозможно скачать файл, возможно нет интернета.");
-        }
-        finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    System.out.println("Невозсожно закрыть  inputStream, error =  " + e.toString());
-                }
-            }
-            if (fileOutputStream != null) {
-                try {
-                    fileOutputStream.close();
-                } catch (IOException e) {
-                    System.out.println("Невозсожно закрыть  outputStream, error =  " + e.toString());
-                }
+            } catch (IOException e) {
+                e.getMessage();
+                return;
             }
         }
-        return true;
-    }
-
-    @Override
-    public void run() {
-
-        download();
-        synchronized (object) {
-
-            object.notify();
-        }
-        try {
-            synchronized (object) {
-                object.wait();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
 

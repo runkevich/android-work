@@ -50,27 +50,27 @@ public class Manager {
                 return;
         }
 
-        if (fileName.contains(".xml")) {
-            DownloaderData downloader = new DownloaderData(link, fileName,  object);
-            Thread downloadThread = new Thread(downloader);
-            downloadThread.start();
+//        if (fileName.contains(".xml")) {
+//            DownloaderData downloader = new DownloaderData(link, fileName,  object);
+//            Thread downloadThread = new Thread(downloader);
+//            downloadThread.start();
+//
+//            ParseXML parseXML = new ParseXML(fileName, object);
+//            Thread parseThread = new Thread(parseXML);
+//            parseThread.start();
+//            root = parseXML.parse();
+//
+//        } else {
+//            DownloaderData downloader = new DownloaderData(link, fileName,  object);
+//            Thread downloadThread = new Thread(downloader);
+//            downloadThread.start();
+//
+//            ParseJson parseJson = new ParseJson(fileName,object);
+//            Thread  parseThread = new Thread(parseJson);
+//            root = parseJson.parse();
+//            parseThread.start();
 
-            ParseXML parseXML = new ParseXML(fileName, object);
-            Thread parseThread = new Thread(parseXML);
-            parseThread.start();
-            root = parseXML.parse();
-
-        } else {
-            DownloaderData downloader = new DownloaderData(link, fileName,  object);
-            Thread downloadThread = new Thread(downloader);
-            downloadThread.start();
-
-            ParseJson parseJson = new ParseJson(fileName,object);
-            Thread  parseThread = new Thread(parseJson);
-            root = parseJson.parse();
-            parseThread.start();
-
-        }
+       // }
     }
 
     public static void showSchedule(){

@@ -117,12 +117,12 @@ public class Schedule {
 
         return id +
                 ": номер автобуса : " + busNumber +
-                ",от " + locationStart  +
+                "\nот " + locationStart  +
                 " - до " + locationEnd  +
-                ", цена = " + price +
-                ", начало поездки:" + dateStart +
-                ", конец = " + dateEnd +
-                "\n   путевые точки = " + waypoints + '\n';
+                "\nцена = " + price +
+                "\nначало поездки:" + dateStart +
+                "\nконец = " + dateEnd +
+                "\nпутевые точки = " + waypoints;
     }
 
 

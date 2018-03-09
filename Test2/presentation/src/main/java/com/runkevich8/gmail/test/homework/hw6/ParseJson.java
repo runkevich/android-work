@@ -1,5 +1,7 @@
 package com.runkevich8.gmail.test.homework.hw6;
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -8,24 +10,19 @@ import java.io.FileReader;
 import java.util.Date;
 
 
-public class ParseJson extends Thread implements ParseData {
+public class ParseJson {
 
     private Object object;
-    String fileName;
+    String fileName ;
     Root root;
 
-    public ParseJson(String fileName, Object object){
-        this.fileName = fileName;
-        this.object = object;
-    }
-
-    public Root parse(){
+    public Root parse(Context context){
 
         try {
 
 
             BufferedReader bufferedReader =
-                    new BufferedReader(new FileReader(fileName));
+                    new BufferedReader(new FileReader(context.getFileStreamPath("FirstFile.json")));
 
             GsonBuilder builder = new GsonBuilder().
                     registerTypeAdapter(Date.class, new DateGsonConverter());
@@ -40,20 +37,4 @@ public class ParseJson extends Thread implements ParseData {
         return null;
     }
 
-
-    @Override
-    public void run() {
-        try {
-            synchronized (object) {
-                object.wait();
-            }
-
-            } catch (InterruptedException e) {
-        }
-
-        synchronized (object) {
-            object.notify();
-        }
-        parse();
-    }
 }

@@ -3,24 +3,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/hw_6_xml"
+
+    <EditText
+
+        android:id="@+id/hw6_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="xml"
-        android:background="@drawable/button_selector"
-        android:layout_margin="5dp"/>
+        android:hint="Поиск по цене билета" />
     <Button
         android:id="@+id/hw_6_json"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="json"
+        android:text="Скачать файл"
         android:background="@drawable/button_selector"
         android:layout_margin="5dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/hw6_rv"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"/>
 </LinearLayout>
