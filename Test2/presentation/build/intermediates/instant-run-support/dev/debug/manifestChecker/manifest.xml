@@ -41,6 +41,10 @@
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
         </activity>
         <activity
+            android:name="com.runkevich8.gmail.test.homework.hw9.Homework9Activity"
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
+        </activity>
+        <activity
             android:name="com.runkevich8.gmail.test.homework.hw8.Homework8Activity"
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
         </activity>

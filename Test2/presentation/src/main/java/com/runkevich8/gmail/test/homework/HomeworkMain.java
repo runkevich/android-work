@@ -11,11 +11,13 @@ import android.widget.Button;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
+import com.runkevich8.gmail.test.homework.hw3.Homework3Activity;
 import com.runkevich8.gmail.test.homework.hw4.Homework4Activity;
 import com.runkevich8.gmail.test.homework.hw5.Homework5Activity;
 import com.runkevich8.gmail.test.homework.hw6.Homework6Activity;
 import com.runkevich8.gmail.test.homework.hw7.Homework7Activity;
 import com.runkevich8.gmail.test.homework.hw8.Homework8Activity;
+import com.runkevich8.gmail.test.homework.hw9.Homework9Activity;
 
 public class HomeworkMain extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class HomeworkMain extends AppCompatActivity {
     private Button hw6;
     private Button hw7;
     private Button hw8;
+    private Button hw9;
 
 
     @Override
@@ -42,6 +45,7 @@ public class HomeworkMain extends AppCompatActivity {
         hw6 = findViewById(R.id.hw_6);
         hw7 = findViewById(R.id.hw_7);
         hw8 = findViewById(R.id.hw_8);
+        hw9 = findViewById(R.id.hw_9);
 
 
         View.OnClickListener hw1Click = new View.OnClickListener() {
@@ -75,7 +79,7 @@ public class HomeworkMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeworkMain.this,
-                        Homework2Activity.class);
+                        Homework3Activity.class);
                 startActivity(intent);
             }
         };
@@ -145,6 +149,18 @@ public class HomeworkMain extends AppCompatActivity {
         };
 
         hw8.setOnClickListener(hw8Click);
+
+
+        View.OnClickListener hw9Click = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeworkMain.this,
+                        Homework9Activity.class);
+                startActivity(intent);
+            }
+        };
+
+        hw9.setOnClickListener(hw9Click);
     }
 }
 

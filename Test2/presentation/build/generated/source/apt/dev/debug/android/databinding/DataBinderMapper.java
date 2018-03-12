@@ -8,6 +8,8 @@ class DataBinderMapper  {
     }
     public android.databinding.ViewDataBinding getDataBinder(android.databinding.DataBindingComponent bindingComponent, android.view.View view, int layoutId) {
         switch(layoutId) {
+                case com.runkevich8.gmail.test.R.layout.activity_hw9:
+                    return com.runkevich8.gmail.test.databinding.ActivityHw9Binding.bind(view, bindingComponent);
                 case com.runkevich8.gmail.test.R.layout.activity_classwork8:
                     return com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding.bind(view, bindingComponent);
         }
@@ -24,6 +26,12 @@ class DataBinderMapper  {
         }
         final int code = tag.hashCode();
         switch(code) {
+            case -1652907376: {
+                if(tag.equals("layout/activity_hw9_0")) {
+                    return com.runkevich8.gmail.test.R.layout.activity_hw9;
+                }
+                break;
+            }
             case -776930613: {
                 if(tag.equals("layout/activity_classwork8_0")) {
                     return com.runkevich8.gmail.test.R.layout.activity_classwork8;
@@ -42,6 +50,7 @@ class DataBinderMapper  {
     private static class InnerBrLookup {
         static String[] sKeys = new String[]{
             "_all"
-            ,"myEntity"};
+            ,"myEntity"
+            ,"user"};
     }
 }

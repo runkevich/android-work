@@ -29,6 +29,10 @@
             android:parentActivityName=".homework.HomeworkMain">
         </activity>
 
+        <activity android:name=".homework.hw9.Homework9Activity"
+            android:parentActivityName=".homework.HomeworkMain">
+
+        </activity>
         <activity android:name=".homework.hw8.Homework8Activity"
             android:parentActivityName=".homework.HomeworkMain">
 
