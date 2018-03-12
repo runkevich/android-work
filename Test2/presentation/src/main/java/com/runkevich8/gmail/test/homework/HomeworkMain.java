@@ -9,13 +9,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.runkevich8.gmail.test.R;
-import com.runkevich8.gmail.test.classwork.classwork8.Classwork8Activity;
 import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
 import com.runkevich8.gmail.test.homework.hw4.Homework4Activity;
 import com.runkevich8.gmail.test.homework.hw5.Homework5Activity;
 import com.runkevich8.gmail.test.homework.hw6.Homework6Activity;
 import com.runkevich8.gmail.test.homework.hw7.Homework7Activity;
+import com.runkevich8.gmail.test.homework.hw8.Homework8Activity;
 
 public class HomeworkMain extends AppCompatActivity {
 
@@ -139,7 +139,7 @@ public class HomeworkMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeworkMain.this,
-                        Classwork8Activity.class);
+                        Homework8Activity.class);
                 startActivity(intent);
             }
         };

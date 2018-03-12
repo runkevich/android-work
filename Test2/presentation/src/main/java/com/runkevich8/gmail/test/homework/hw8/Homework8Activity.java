@@ -6,35 +6,34 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 import com.runkevich8.gmail.test.R;
 
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;
 
-public class Homework8Activity extends AppCompatActivity{
+
+public class Homework8Activity extends AppCompatActivity implements PublishContract{
     public PublishSubject<Integer> publishSubject =PublishSubject.create(); //почта - умеет получать событие
-    private int count = 0;
+    private Observable<Long> observable;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hw8); findViewById(R.id.buttonFrgment_hw8).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                publishSubject.onNext(count);
-                count++;
-            }
-        });
+        setContentView(R.layout.activity_hw8);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.containerFragment_hw8, OneFragmentHw8.getInstance());
-        fragmentTransaction.commit();
+        if (savedInstanceState == null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.containerFragment_hw8, OneFragmentHw8.getInstance("",""));
+            fragmentTransaction.commit();
+        }
+        observable = Observable.interval(1, TimeUnit.SECONDS);
     }
 
-
-//    @Override
-//    public Observable<Integer> getObservable() {
-//        return publishSubject;
-//    }
+    public Observable<Long> getObservable() {
+        return observable;
+    }
 }
