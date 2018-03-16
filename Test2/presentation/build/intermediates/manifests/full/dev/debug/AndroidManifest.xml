@@ -23,7 +23,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.runkevich8.gmail.test.homework.HomeworkMain" >
             <intent-filter>
@@ -133,6 +132,12 @@
             android:process=":leakcanary"
             android:taskAffinity="com.squareup.leakcanary.com.runkevich8.gmail.test"
             android:theme="@style/leak_canary_Theme.Transparent" />
+
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.runkevich8.gmail.test.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

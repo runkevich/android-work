@@ -1,8 +1,14 @@
 package com.runkevich8.gmail.presentation.base;
 
 
+import android.arch.lifecycle.ViewModel;
 
-public class BaseViewModel {
+import io.reactivex.disposables.CompositeDisposable;
+
+public class BaseViewModel extends ViewModel{
+
+    //может всё внутри отписать, как массив disposable
+    protected CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     public void onStart(){
 
@@ -18,4 +24,11 @@ public class BaseViewModel {
 
     }
 
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        if(!compositeDisposable.isDisposed()){
+            compositeDisposable.dispose();
+        }
+    }
 }

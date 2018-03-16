@@ -135,6 +135,11 @@
             android:theme="@style/leak_canary_Theme.Transparent" />
 
         <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.runkevich8.gmail.test.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
+        <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.runkevich8.gmail.test.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />

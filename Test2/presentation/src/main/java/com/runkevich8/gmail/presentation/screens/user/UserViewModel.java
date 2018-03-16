@@ -6,19 +6,19 @@ import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 import android.util.Log;
 
+import com.gmail.runkevich8.data.repository.UserRepositoryImpl;
 import com.gmail.runkevich8.domain.entity.UserEntity;
+import com.gmail.runkevich8.domain.interactor.GetUserByIdUseCase;
+import com.runkevich8.gmail.executor.UIThread;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class UserViewModel extends BaseViewModel {
+
+    private GetUserByIdUseCase getUserByIdUseCase =
+            new GetUserByIdUseCase(new UIThread(),new UserRepositoryImpl());
 
     public final ObservableField<String> username = new ObservableField<String>("");
     public final ObservableField<String> profileurl = new ObservableField<String>("");
@@ -26,42 +26,12 @@ public class UserViewModel extends BaseViewModel {
     public final ObservableBoolean gender = new ObservableBoolean();
     public final ObservableBoolean progressVisible = new ObservableBoolean();
 
-    public CompositeDisposable compositeDisposable = new CompositeDisposable();
-                                                    //может всё внутри отписать, как массив disposable
 
-    @Override //сами сделали - не андроидовский
-    public void onResume() {
-
+    //затем будет его создавать андроид
+    public UserViewModel() {
         progressVisible.set(true);
-        Observable.create(new ObservableOnSubscribe<UserEntity>() {
-            @Override
-            public void subscribe(ObservableEmitter<UserEntity> emitter) throws Exception {
-                Thread.sleep(2000);
-
-                UserEntity entity =
-                        new UserEntity("Katya Runkevich",22,
-                        "http://www.freeiconspng.com/uploads/spongebob-and-patrick-png-6.png",true);
-                emitter.onNext(entity);//переекинь данне какие-то в UI поток
-
-                emitter.onComplete();//закончили с этими данными
-
-               // emitter.onError(Throwable error);
-            }
-        })
-                //эти метода решают кто в каком потоке будет запускаться
-                .subscribeOn(Schedulers.io())                    //в каком потоке выполнится
-                .observeOn(AndroidSchedulers.mainThread())     // observeOn ---- в каком потоке получить результат
-
-
-//                .subscribe(new Consumer<UserEntity>() {
-//                    @Override
-//                    public void accept(UserEntity userEntity) throws Exception {
-//                        username.set(userEntity.getUsername());
-//                        profileurl.set(userEntity.getProfileUrl());
-//                        age.set(userEntity.getAge());
-//                        gender.set(userEntity.isGender());
-//                    }
-//                })
+        getUserByIdUseCase
+                .get("id")
                 .subscribe(new Observer<UserEntity>() {
 
                     @Override
@@ -91,13 +61,6 @@ public class UserViewModel extends BaseViewModel {
                         Log.e("OOOOOOOOOOOOOOOO","onComplete");
                         progressVisible.set(false);
                     }
-
                 });
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        compositeDisposable.dispose();
     }
 }

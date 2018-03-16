@@ -12,6 +12,7 @@ MERGED from [com.android.support:design:27.0.2] C:\Users\Eka\.gradle\caches\tran
 MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\94c935d61ae0b5553d1ddfeed1bd87d3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:17:1-22:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\ebc483ec346f600394340d73df4aab13\AndroidManifest.xml:15:1-21:12
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:17:1-32:12
 MERGED from [:data] D:\Java\android-work\Test2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:2:1-13:12
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:17:1-25:12
@@ -21,12 +22,13 @@ MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Eka\.
 MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\0233d89187695d9ed029b77d0456b714\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\23035d63ca612ff3c5a058b81b12aeda\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\0ac2b56c8572600d91ce35ece4ac53ed\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\573f3787a87073801e4ddfab4f00b732\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:17:1-22:12
-MERGED from [:domain] D:\Java\android-work\Test2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-10:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fcac14502a593c02453ea6a11bf4db39\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\65637c9d6de04f96c9b7d5c35f15427e\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:2:1-11:12
+MERGED from [:domain] D:\Java\android-work\Test2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-10:12
 INJECTED from D:\Java\android-work\Test2\presentation\src\main\AndroidManifest.xml:1:1-99:12
 INJECTED from D:\Java\android-work\Test2\presentation\src\main\AndroidManifest.xml:1:1-99:12
 INJECTED from D:\Java\android-work\Test2\presentation\src\main\AndroidManifest.xml:1:1-99:12
@@ -64,6 +66,8 @@ MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] C:\Users\Eka\.gra
 MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\rxpermissions-0.9.5.aar\7dcac5208f48b66a81c3d7e2575d4c1a\AndroidManifest.xml:11:5-20
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:26:5-59:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:26:5-59:19
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:24:5-30:19
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:24:5-30:19
 MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:11:5-20
 MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:11:5-20
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-analyzer-1.5.4.aar\8c67886e8614f9f206f67a7930f73951\AndroidManifest.xml:23:5-20
@@ -232,6 +236,8 @@ MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\cache
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\b7b14eaededc22a6bca280692eab845f\AndroidManifest.xml:20:5-44
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\ebc483ec346f600394340d73df4aab13\AndroidManifest.xml:19:5-43
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\ebc483ec346f600394340d73df4aab13\AndroidManifest.xml:19:5-43
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:20:5-22:41
 MERGED from [:data] D:\Java\android-work\Test2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:8:5-10:41
 MERGED from [:data] D:\Java\android-work\Test2\data\build\intermediates\manifests\full\debug\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\64dd2488156aa39bbd65608830f8ca69\AndroidManifest.xml:7:5-9:41
@@ -250,18 +256,20 @@ MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Eka\.gradle\ca
 MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\23035d63ca612ff3c5a058b81b12aeda\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\0ac2b56c8572600d91ce35ece4ac53ed\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\0ac2b56c8572600d91ce35ece4ac53ed\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\81362985e6c4e60744341b69d9c7628c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\573f3787a87073801e4ddfab4f00b732\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\573f3787a87073801e4ddfab4f00b732\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\e95c5fb1ba4ca50128f179a4099ff884\AndroidManifest.xml:20:5-44
-MERGED from [:domain] D:\Java\android-work\Test2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:6:5-8:41
-MERGED from [:domain] D:\Java\android-work\Test2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:6:5-8:41
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fcac14502a593c02453ea6a11bf4db39\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fcac14502a593c02453ea6a11bf4db39\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\65637c9d6de04f96c9b7d5c35f15427e\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\65637c9d6de04f96c9b7d5c35f15427e\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\66824d118283a20fdfea91f30303033f\AndroidManifest.xml:5:5-7:41
+MERGED from [:domain] D:\Java\android-work\Test2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:domain] D:\Java\android-work\Test2\domain\build\intermediates\manifests\full\debug\AndroidManifest.xml:6:5-8:41
 INJECTED from D:\Java\android-work\Test2\presentation\src\main\AndroidManifest.xml
 INJECTED from D:\Java\android-work\Test2\presentation\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -331,3 +339,13 @@ ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.grad
 		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:57:13-76
 	android:name
 		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\leakcanary-android-1.5.4.aar\0be9f19facc6c7b66e613309172fc0ca\AndroidManifest.xml:51:13-93
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:27:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Eka\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\acd2c6249e26826040b5fbabb4325dc0\AndroidManifest.xml:26:13-83

@@ -58,6 +58,9 @@ dependencies {
     implementation dependency.supportDesign
     implementation dependency.rxAndroid
 
+    implementation dependency.archComponentsExtensions
+    annotationProcessor dependency.archComponentsCompiler
+
     annotationProcessor dependency.androidBindingCompiler
 
     implementation project(path: ':data')
