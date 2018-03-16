@@ -50,7 +50,7 @@ class DataBinderMapper  {
     private static class InnerBrLookup {
         static String[] sKeys = new String[]{
             "_all"
-            ,"myEntity"
-            ,"user"};
+            ,"user"
+            ,"viewModel"};
     }
 }

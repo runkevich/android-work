@@ -20,14 +20,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".classwork.classwork8.Classwork8Activity"
+        <activity android:name=".classwork.classwork9.Classwork9Activity"
             android:parentActivityName=".homework.HomeworkMain">
 
         </activity>
-
+        <activity android:name="com.runkevich8.gmail.presentation.screens.user.Classwork8Activity" />
         <activity android:name=".classwork.classwork7.Classwork7Activity"
             android:parentActivityName=".homework.HomeworkMain">
         </activity>
+
 
         <activity android:name=".homework.hw9.Homework9Activity"
             android:parentActivityName=".homework.HomeworkMain">

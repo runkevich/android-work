@@ -26,7 +26,7 @@
         android:orientation="vertical">
         <TextView
             android:id="@+id/hw9_name"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textColor="@{user.gender? @color/colorAccent : @color/colorPrimary }"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,8 @@
 
         <TextView
             android:id="@+id/hw9_age"
-            android:textSize="12sp"
+            android:textSize="14sp"
+            android:textColor="@{user.gender? @color/colorAccent : @color/colorPrimary }"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.age}"/>

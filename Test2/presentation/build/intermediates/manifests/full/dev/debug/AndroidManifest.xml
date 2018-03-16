@@ -33,9 +33,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.runkevich8.gmail.test.classwork.classwork8.Classwork8Activity"
+            android:name="com.runkevich8.gmail.test.classwork.classwork9.Classwork9Activity"
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
         </activity>
+        <activity android:name="com.runkevich8.gmail.presentation.screens.user.Classwork8Activity" />
         <activity
             android:name="com.runkevich8.gmail.test.classwork.classwork7.Classwork7Activity"
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >

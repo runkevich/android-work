@@ -155,7 +155,7 @@ public class HomeworkMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeworkMain.this,
-                        Homework9Activity.class);
+                       Homework9Activity.class);
                 startActivity(intent);
             }
         };

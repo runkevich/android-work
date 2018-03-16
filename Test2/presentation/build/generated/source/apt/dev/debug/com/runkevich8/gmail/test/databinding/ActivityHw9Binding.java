@@ -111,6 +111,7 @@ public class ActivityHw9Binding extends android.databinding.ViewDataBinding  {
         java.lang.String userNameChar = null;
         java.lang.String userImageUrl = null;
         java.lang.String userAge = null;
+        int userGenderHw9AgeAndroidColorColorAccentHw9AgeAndroidColorColorPrimary = 0;
         com.runkevich8.gmail.test.homework.hw9.User user = mUser;
         java.lang.String userNameCharUserSurName = null;
         int userGenderHw9NameAndroidColorColorAccentHw9NameAndroidColorColorPrimary = 0;
@@ -134,15 +135,19 @@ public class ActivityHw9Binding extends android.databinding.ViewDataBinding  {
             if((dirtyFlags & 0x3L) != 0) {
                 if(userGender) {
                         dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x20L;
                 }
                 else {
                         dirtyFlags |= 0x4L;
+                        dirtyFlags |= 0x10L;
                 }
             }
 
 
                 // read (user.name) + (' ')
                 userNameChar = (userName) + (' ');
+                // read user.gender ? @android:color/colorAccent : @android:color/colorPrimary
+                userGenderHw9AgeAndroidColorColorAccentHw9AgeAndroidColorColorPrimary = ((userGender) ? (getColorFromResource(hw9Age, R.color.colorAccent)) : (getColorFromResource(hw9Age, R.color.colorPrimary)));
                 // read user.gender ? @android:color/colorAccent : @android:color/colorPrimary
                 userGenderHw9NameAndroidColorColorAccentHw9NameAndroidColorColorPrimary = ((userGender) ? (getColorFromResource(hw9Name, R.color.colorAccent)) : (getColorFromResource(hw9Name, R.color.colorPrimary)));
 
@@ -155,6 +160,7 @@ public class ActivityHw9Binding extends android.databinding.ViewDataBinding  {
             // api target 1
 
             com.runkevich8.gmail.test.homework.hw9.CustomBindingAdapter.loadImage(this.colorImage, userImageUrl);
+            this.hw9Age.setTextColor(userGenderHw9AgeAndroidColorColorAccentHw9AgeAndroidColorColorPrimary);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.hw9Age, userAge);
             this.hw9Name.setTextColor(userGenderHw9NameAndroidColorColorAccentHw9NameAndroidColorColorPrimary);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.hw9Name, userNameCharUserSurName);
@@ -197,6 +203,8 @@ public class ActivityHw9Binding extends android.databinding.ViewDataBinding  {
         flag 1 (0x2L): null
         flag 2 (0x3L): user.gender ? @android:color/colorAccent : @android:color/colorPrimary
         flag 3 (0x4L): user.gender ? @android:color/colorAccent : @android:color/colorPrimary
+        flag 4 (0x5L): user.gender ? @android:color/colorAccent : @android:color/colorPrimary
+        flag 5 (0x6L): user.gender ? @android:color/colorAccent : @android:color/colorPrimary
     flag mapping end*/
     //end
 }

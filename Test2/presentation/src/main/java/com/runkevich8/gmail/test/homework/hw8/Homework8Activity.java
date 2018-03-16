@@ -12,11 +12,9 @@ import com.runkevich8.gmail.test.R;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
-import io.reactivex.subjects.PublishSubject;
 
 
 public class Homework8Activity extends AppCompatActivity implements PublishContract{
-    public PublishSubject<Integer> publishSubject =PublishSubject.create(); //почта - умеет получать событие
     private Observable<Long> observable;
 
     @Override

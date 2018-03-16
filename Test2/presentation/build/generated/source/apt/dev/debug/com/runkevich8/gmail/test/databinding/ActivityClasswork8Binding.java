@@ -18,28 +18,35 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     }
     // views
     @NonNull
-    public final android.widget.Button buttonCw8;
+    public final android.widget.TextView cw8Age;
+    @NonNull
+    public final android.widget.ImageView cw8Profileurl;
+    @NonNull
+    public final android.widget.TextView cw8Username;
     @NonNull
     private final android.widget.LinearLayout mboundView0;
     @NonNull
-    public final android.widget.TextView textViewCw8;
+    private final android.widget.ProgressBar mboundView4;
     // variables
     @Nullable
-    private com.runkevich8.gmail.test.classwork.classwork8.MyEntity mMyEntity;
+    private com.runkevich8.gmail.presentation.screens.user.UserViewModel mViewModel;
     // values
     // listeners
-    private OnClickListenerImpl mMyEntityButtonClickAndroidViewViewOnClickListener;
     // Inverse Binding Event Handlers
 
     public ActivityClasswork8Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        super(bindingComponent, root, 3);
-        final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
-        this.buttonCw8 = (android.widget.Button) bindings[2];
-        this.buttonCw8.setTag(null);
+        super(bindingComponent, root, 5);
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        this.cw8Age = (android.widget.TextView) bindings[3];
+        this.cw8Age.setTag(null);
+        this.cw8Profileurl = (android.widget.ImageView) bindings[2];
+        this.cw8Profileurl.setTag(null);
+        this.cw8Username = (android.widget.TextView) bindings[1];
+        this.cw8Username.setTag(null);
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.textViewCw8 = (android.widget.TextView) bindings[1];
-        this.textViewCw8.setTag(null);
+        this.mboundView4 = (android.widget.ProgressBar) bindings[4];
+        this.mboundView4.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -48,7 +55,7 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x10L;
+                mDirtyFlags = 0x40L;
         }
         requestRebind();
     }
@@ -66,8 +73,8 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
-        if (BR.myEntity == variableId) {
-            setMyEntity((com.runkevich8.gmail.test.classwork.classwork8.MyEntity) variable);
+        if (BR.viewModel == variableId) {
+            setViewModel((com.runkevich8.gmail.presentation.screens.user.UserViewModel) variable);
         }
         else {
             variableSet = false;
@@ -75,32 +82,36 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
             return variableSet;
     }
 
-    public void setMyEntity(@Nullable com.runkevich8.gmail.test.classwork.classwork8.MyEntity MyEntity) {
-        this.mMyEntity = MyEntity;
+    public void setViewModel(@Nullable com.runkevich8.gmail.presentation.screens.user.UserViewModel ViewModel) {
+        this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x8L;
+            mDirtyFlags |= 0x20L;
         }
-        notifyPropertyChanged(BR.myEntity);
+        notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
     }
     @Nullable
-    public com.runkevich8.gmail.test.classwork.classwork8.MyEntity getMyEntity() {
-        return mMyEntity;
+    public com.runkevich8.gmail.presentation.screens.user.UserViewModel getViewModel() {
+        return mViewModel;
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeMyEntityButtonVisibilite((android.databinding.ObservableBoolean) object, fieldId);
+                return onChangeViewModelGender((android.databinding.ObservableBoolean) object, fieldId);
             case 1 :
-                return onChangeMyEntityText2((android.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelProfileurl((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 2 :
-                return onChangeMyEntityTextButton((android.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewModelAge((android.databinding.ObservableInt) object, fieldId);
+            case 3 :
+                return onChangeViewModelUsername((android.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 4 :
+                return onChangeViewModelProgressVisible((android.databinding.ObservableBoolean) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeMyEntityButtonVisibilite(android.databinding.ObservableBoolean MyEntityButtonVisibilite, int fieldId) {
+    private boolean onChangeViewModelGender(android.databinding.ObservableBoolean ViewModelGender, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -109,7 +120,7 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
         }
         return false;
     }
-    private boolean onChangeMyEntityText2(android.databinding.ObservableField<java.lang.String> MyEntityText2, int fieldId) {
+    private boolean onChangeViewModelProfileurl(android.databinding.ObservableField<java.lang.String> ViewModelProfileurl, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -118,10 +129,28 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
         }
         return false;
     }
-    private boolean onChangeMyEntityTextButton(android.databinding.ObservableField<java.lang.String> MyEntityTextButton, int fieldId) {
+    private boolean onChangeViewModelAge(android.databinding.ObservableInt ViewModelAge, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelUsername(android.databinding.ObservableField<java.lang.String> ViewModelUsername, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelProgressVisible(android.databinding.ObservableBoolean ViewModelProgressVisible, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x10L;
             }
             return true;
         }
@@ -135,115 +164,157 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        android.databinding.ObservableBoolean myEntityButtonVisibilite = null;
-        int myEntityButtonVisibiliteViewVISIBLEViewGONE = 0;
-        android.view.View.OnClickListener myEntityButtonClickAndroidViewViewOnClickListener = null;
-        android.databinding.ObservableField<java.lang.String> myEntityText2 = null;
-        com.runkevich8.gmail.test.classwork.classwork8.MyEntity myEntity = mMyEntity;
-        boolean myEntityButtonVisibiliteGet = false;
-        android.databinding.ObservableField<java.lang.String> myEntityTextButton = null;
-        java.lang.String myEntityText2Get = null;
-        java.lang.String myEntityTextButtonGet = null;
+        android.databinding.ObservableBoolean viewModelGender = null;
+        boolean viewModelProgressVisibleGet = false;
+        android.databinding.ObservableField<java.lang.String> viewModelProfileurl = null;
+        int viewModelProgressVisibleViewVISIBLEViewGONE = 0;
+        android.databinding.ObservableInt viewModelAge = null;
+        java.lang.String stringValueOfViewModelAge = null;
+        android.databinding.ObservableField<java.lang.String> viewModelUsername = null;
+        android.databinding.ObservableBoolean viewModelProgressVisible = null;
+        boolean viewModelGenderGet = false;
+        int viewModelAgeGet = 0;
+        java.lang.String viewModelProfileurlGet = null;
+        int viewModelGenderCw8AgeAndroidColorColorAccentCw8AgeAndroidColorColorPrimary = 0;
+        int viewModelGenderCw8UsernameAndroidColorColorAccentCw8UsernameAndroidColorColorPrimary = 0;
+        java.lang.String viewModelUsernameGet = null;
+        com.runkevich8.gmail.presentation.screens.user.UserViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x1fL) != 0) {
+        if ((dirtyFlags & 0x7fL) != 0) {
 
 
-            if ((dirtyFlags & 0x19L) != 0) {
+            if ((dirtyFlags & 0x61L) != 0) {
 
-                    if (myEntity != null) {
-                        // read myEntity.buttonVisibilite
-                        myEntityButtonVisibilite = myEntity.buttonVisibilite;
+                    if (viewModel != null) {
+                        // read viewModel.gender
+                        viewModelGender = viewModel.gender;
                     }
-                    updateRegistration(0, myEntityButtonVisibilite);
+                    updateRegistration(0, viewModelGender);
 
 
-                    if (myEntityButtonVisibilite != null) {
-                        // read myEntity.buttonVisibilite.get()
-                        myEntityButtonVisibiliteGet = myEntityButtonVisibilite.get();
+                    if (viewModelGender != null) {
+                        // read viewModel.gender.get()
+                        viewModelGenderGet = viewModelGender.get();
                     }
-                if((dirtyFlags & 0x19L) != 0) {
-                    if(myEntityButtonVisibiliteGet) {
-                            dirtyFlags |= 0x40L;
+                if((dirtyFlags & 0x61L) != 0) {
+                    if(viewModelGenderGet) {
+                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x1000L;
                     }
                     else {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x200L;
+                            dirtyFlags |= 0x800L;
                     }
                 }
 
 
-                    // read myEntity.buttonVisibilite.get() ? View.VISIBLE : View.GONE
-                    myEntityButtonVisibiliteViewVISIBLEViewGONE = ((myEntityButtonVisibiliteGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
+                    viewModelGenderCw8AgeAndroidColorColorAccentCw8AgeAndroidColorColorPrimary = ((viewModelGenderGet) ? (getColorFromResource(cw8Age, R.color.colorAccent)) : (getColorFromResource(cw8Age, R.color.colorPrimary)));
+                    // read viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
+                    viewModelGenderCw8UsernameAndroidColorColorAccentCw8UsernameAndroidColorColorPrimary = ((viewModelGenderGet) ? (getColorFromResource(cw8Username, R.color.colorAccent)) : (getColorFromResource(cw8Username, R.color.colorPrimary)));
             }
-            if ((dirtyFlags & 0x18L) != 0) {
+            if ((dirtyFlags & 0x62L) != 0) {
 
-                    if (myEntity != null) {
-                        // read myEntity::buttonClick
-                        myEntityButtonClickAndroidViewViewOnClickListener = (((mMyEntityButtonClickAndroidViewViewOnClickListener == null) ? (mMyEntityButtonClickAndroidViewViewOnClickListener = new OnClickListenerImpl()) : mMyEntityButtonClickAndroidViewViewOnClickListener).setValue(myEntity));
+                    if (viewModel != null) {
+                        // read viewModel.profileurl
+                        viewModelProfileurl = viewModel.profileurl;
                     }
-            }
-            if ((dirtyFlags & 0x1aL) != 0) {
-
-                    if (myEntity != null) {
-                        // read myEntity.text2
-                        myEntityText2 = myEntity.text2;
-                    }
-                    updateRegistration(1, myEntityText2);
+                    updateRegistration(1, viewModelProfileurl);
 
 
-                    if (myEntityText2 != null) {
-                        // read myEntity.text2.get()
-                        myEntityText2Get = myEntityText2.get();
+                    if (viewModelProfileurl != null) {
+                        // read viewModel.profileurl.get()
+                        viewModelProfileurlGet = viewModelProfileurl.get();
                     }
             }
-            if ((dirtyFlags & 0x1cL) != 0) {
+            if ((dirtyFlags & 0x64L) != 0) {
 
-                    if (myEntity != null) {
-                        // read myEntity.textButton
-                        myEntityTextButton = myEntity.textButton;
+                    if (viewModel != null) {
+                        // read viewModel.age
+                        viewModelAge = viewModel.age;
                     }
-                    updateRegistration(2, myEntityTextButton);
+                    updateRegistration(2, viewModelAge);
 
 
-                    if (myEntityTextButton != null) {
-                        // read myEntity.textButton.get()
-                        myEntityTextButtonGet = myEntityTextButton.get();
+                    if (viewModelAge != null) {
+                        // read viewModel.age.get()
+                        viewModelAgeGet = viewModelAge.get();
                     }
+
+
+                    // read String.valueOf(viewModel.age.get())
+                    stringValueOfViewModelAge = java.lang.String.valueOf(viewModelAgeGet);
+            }
+            if ((dirtyFlags & 0x68L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.username
+                        viewModelUsername = viewModel.username;
+                    }
+                    updateRegistration(3, viewModelUsername);
+
+
+                    if (viewModelUsername != null) {
+                        // read viewModel.username.get()
+                        viewModelUsernameGet = viewModelUsername.get();
+                    }
+            }
+            if ((dirtyFlags & 0x70L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.progressVisible
+                        viewModelProgressVisible = viewModel.progressVisible;
+                    }
+                    updateRegistration(4, viewModelProgressVisible);
+
+
+                    if (viewModelProgressVisible != null) {
+                        // read viewModel.progressVisible.get()
+                        viewModelProgressVisibleGet = viewModelProgressVisible.get();
+                    }
+                if((dirtyFlags & 0x70L) != 0) {
+                    if(viewModelProgressVisibleGet) {
+                            dirtyFlags |= 0x100L;
+                    }
+                    else {
+                            dirtyFlags |= 0x80L;
+                    }
+                }
+
+
+                    // read viewModel.progressVisible.get() ? View.VISIBLE : View.GONE
+                    viewModelProgressVisibleViewVISIBLEViewGONE = ((viewModelProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x19L) != 0) {
+        if ((dirtyFlags & 0x61L) != 0) {
             // api target 1
 
-            this.buttonCw8.setVisibility(myEntityButtonVisibiliteViewVISIBLEViewGONE);
+            this.cw8Age.setTextColor(viewModelGenderCw8AgeAndroidColorColorAccentCw8AgeAndroidColorColorPrimary);
+            this.cw8Username.setTextColor(viewModelGenderCw8UsernameAndroidColorColorAccentCw8UsernameAndroidColorColorPrimary);
         }
-        if ((dirtyFlags & 0x1cL) != 0) {
+        if ((dirtyFlags & 0x64L) != 0) {
             // api target 1
 
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.buttonCw8, myEntityTextButtonGet);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.cw8Age, stringValueOfViewModelAge);
         }
-        if ((dirtyFlags & 0x18L) != 0) {
+        if ((dirtyFlags & 0x62L) != 0) {
             // api target 1
 
-            this.buttonCw8.setOnClickListener(myEntityButtonClickAndroidViewViewOnClickListener);
+            com.runkevich8.gmail.test.homework.hw9.CustomBindingAdapter.loadImage(this.cw8Profileurl, viewModelProfileurlGet);
         }
-        if ((dirtyFlags & 0x1aL) != 0) {
+        if ((dirtyFlags & 0x68L) != 0) {
             // api target 1
 
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.textViewCw8, myEntityText2Get);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.cw8Username, viewModelUsernameGet);
+        }
+        if ((dirtyFlags & 0x70L) != 0) {
+            // api target 1
+
+            this.mboundView4.setVisibility(viewModelProgressVisibleViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
-    public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private com.runkevich8.gmail.test.classwork.classwork8.MyEntity value;
-        public OnClickListenerImpl setValue(com.runkevich8.gmail.test.classwork.classwork8.MyEntity value) {
-            this.value = value;
-            return value == null ? null : this;
-        }
-        @Override
-        public void onClick(android.view.View arg0) {
-            this.value.buttonClick(arg0);
-        }
-    }
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
@@ -276,13 +347,19 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
         return new ActivityClasswork8Binding(bindingComponent, view);
     }
     /* flag mapping
-        flag 0 (0x1L): myEntity.buttonVisibilite
-        flag 1 (0x2L): myEntity.text2
-        flag 2 (0x3L): myEntity.textButton
-        flag 3 (0x4L): myEntity
-        flag 4 (0x5L): null
-        flag 5 (0x6L): myEntity.buttonVisibilite.get() ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): myEntity.buttonVisibilite.get() ? View.VISIBLE : View.GONE
+        flag 0 (0x1L): viewModel.gender
+        flag 1 (0x2L): viewModel.profileurl
+        flag 2 (0x3L): viewModel.age
+        flag 3 (0x4L): viewModel.username
+        flag 4 (0x5L): viewModel.progressVisible
+        flag 5 (0x6L): viewModel
+        flag 6 (0x7L): null
+        flag 7 (0x8L): viewModel.progressVisible.get() ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewModel.progressVisible.get() ? View.VISIBLE : View.GONE
+        flag 9 (0xaL): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
+        flag 10 (0xbL): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
+        flag 11 (0xcL): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
+        flag 12 (0xdL): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
     flag mapping end*/
     //end
 }
