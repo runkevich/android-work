@@ -5,10 +5,17 @@ import android.arch.lifecycle.ViewModel;
 
 import io.reactivex.disposables.CompositeDisposable;
 
-public class BaseViewModel extends ViewModel{
+public abstract class BaseViewModel extends ViewModel{
 
     //может всё внутри отписать, как массив disposable
     protected CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+    public BaseViewModel(){
+        super();
+        createInject();
+    }
+
+    public abstract void createInject();
 
     public void onStart(){
 

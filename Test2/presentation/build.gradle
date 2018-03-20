@@ -58,12 +58,18 @@ dependencies {
     implementation dependency.supportDesign
     implementation dependency.rxAndroid
 
-    implementation dependency.archComponentsExtensions
+    implementation dependency.archComponentsExtention
     annotationProcessor dependency.archComponentsCompiler
+
+    implementation dependency.dagger
+    annotationProcessor dependency.daggerCompiler
 
     annotationProcessor dependency.androidBindingCompiler
 
+
+
     implementation project(path: ':data')
+    implementation project(path: ':domain')
 
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'

@@ -6,19 +6,22 @@ import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 import android.util.Log;
 
-import com.gmail.runkevich8.data.repository.UserRepositoryImpl;
 import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.interactor.GetUserByIdUseCase;
-import com.runkevich8.gmail.executor.UIThread;
+import com.runkevich8.gmail.app.App;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
+
+import javax.inject.Inject;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 public class UserViewModel extends BaseViewModel {
 
-    private GetUserByIdUseCase getUserByIdUseCase =
-            new GetUserByIdUseCase(new UIThread(),new UserRepositoryImpl());
+
+    @Inject
+    public GetUserByIdUseCase getUserByIdUseCase ;
+           // new GetUserByIdUseCase(new UIThread(),new UserRepositoryImpl());
 
     public final ObservableField<String> username = new ObservableField<String>("");
     public final ObservableField<String> profileurl = new ObservableField<String>("");
@@ -26,9 +29,15 @@ public class UserViewModel extends BaseViewModel {
     public final ObservableBoolean gender = new ObservableBoolean();
     public final ObservableBoolean progressVisible = new ObservableBoolean();
 
-
+    @Override
+    public void createInject() {
+        App.getAppComponent().inject(this);
+    }
     //затем будет его создавать андроид
     public UserViewModel() {
+
+        super();
+
         progressVisible.set(true);
         getUserByIdUseCase
                 .get("id")
@@ -63,4 +72,6 @@ public class UserViewModel extends BaseViewModel {
                     }
                 });
     }
+
+
 }

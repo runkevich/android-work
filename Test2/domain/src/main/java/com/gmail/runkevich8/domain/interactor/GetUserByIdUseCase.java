@@ -5,12 +5,15 @@ import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.executor.PostExecutionThread;
 import com.gmail.runkevich8.domain.repository.UserRepository;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 
 public class GetUserByIdUseCase extends BaseUseCase{
 
     private UserRepository userRepository;
 
+    @Inject
     public GetUserByIdUseCase(PostExecutionThread postExecuteionThread,
                               UserRepository userRepository) {
         super(postExecuteionThread);

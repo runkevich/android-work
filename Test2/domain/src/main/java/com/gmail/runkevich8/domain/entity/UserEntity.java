@@ -9,7 +9,7 @@ public class UserEntity {
     private String profileUrl;
     private boolean gender;
 
-    public UserEntity(){
+    public UserEntity(String userName, int age, String profileUrl){
 
     }
 
