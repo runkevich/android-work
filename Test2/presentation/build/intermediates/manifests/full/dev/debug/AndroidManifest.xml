@@ -24,7 +24,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.runkevich8.gmail.test.homework.HomeworkMain" >
             <intent-filter>
@@ -37,7 +36,7 @@
             android:name="com.runkevich8.gmail.test.classwork.classwork9.Classwork9Activity"
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
         </activity>
-        <activity android:name="com.runkevich8.gmail.presentation.screens.user.Classwork8Activity" />
+        <activity android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity" />
         <activity
             android:name="com.runkevich8.gmail.test.classwork.classwork7.Classwork7Activity"
             android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >

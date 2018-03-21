@@ -6,9 +6,9 @@ import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
 
-public class Classwork8Activity extends BaseMvvmActivity<ActivityClasswork8Binding,UserViewModel> {
+public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,UserViewModel> {
 
-   // Classwork8Activity = ActivityUserBinding
+   // UserActivity = ActivityUserBinding
     //import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
 
     @Override
