@@ -58,7 +58,10 @@
         <!--android:background="@drawable/button_selector"-->
         <!--android:layout_margin="5dp"-->
         <!--android:onClick="@{myEntity::buttonClick}"/>-->
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclePR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
          

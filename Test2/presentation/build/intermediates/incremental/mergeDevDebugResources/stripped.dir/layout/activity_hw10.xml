@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                 
+                            
+                                                                                           
+           
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/activity_hw10_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclePR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="binding_1"                     />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            />
+
+    </RelativeLayout>
+         

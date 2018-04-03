@@ -1,8 +1,10 @@
 package com.runkevich8.gmail.injection;
 
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
 
+import com.gmail.runkevich8.data.database.AppDatabase;
 import com.gmail.runkevich8.data.net.RestApi;
 import com.gmail.runkevich8.data.net.RestService;
 import com.gmail.runkevich8.data.repository.UserRepositoryImpl;
@@ -11,12 +13,19 @@ import com.gmail.runkevich8.domain.repository.UserRepository;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.runkevich8.gmail.executor.UIThread;
+import com.runkevich8.gmail.test.BuildConfig;
+
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class AppModule {
@@ -45,7 +54,18 @@ public class AppModule {
 //    public abstract PostExecutionThread getUiThread(UIThread uiThread);
 
 
+    @Provides
+    @Singleton
+    public AppDatabase getAppDatabase(Context context) {
 
+        AppDatabase appDatabase = Room.databaseBuilder(context,
+                AppDatabase.class,
+                "database")
+                .fallbackToDestructiveMigration()
+                .build();
+
+        return appDatabase;
+    }
     @Provides
     @Singleton
     public UserRepository getUserRepository(Context context,
@@ -55,15 +75,45 @@ public class AppModule {
 //______________________________________
     @Provides
     @Singleton
-    public Retrofit getRetrofit(Gson gson){
+    public Retrofit getRetrofit(OkHttpClient okHttpClient,Gson gson){
 
         return  new Retrofit.Builder()
-                //.addCallAdapterFactory()
-                //.addConverterFactory()
-       //         .baseUrl(BuildConfig.APPLICATION_ID)
+                .baseUrl(BuildConfig.MY_CLOUD_API)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(okHttpClient)
                 .build();
-       // .baseUrl(BuildConfig.)
+
     }
+
+    @Provides
+    @Singleton
+    public OkHttpClient getOkHttpClient(){
+
+        //тоже самое ,что и httpUrlConnection в джаве
+
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        builder
+                .readTimeout(10, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .connectTimeout(10,TimeUnit.SECONDS);
+
+
+
+         //между получение и отправкой можно модифицировать код
+
+        if(BuildConfig.DEBUG){
+
+            HttpLoggingInterceptor httpLoggingInterceptor =
+                    new  HttpLoggingInterceptor();
+            httpLoggingInterceptor.setLevel(HttpLoggingInterceptor .Level.BODY);
+
+         builder.addInterceptor(httpLoggingInterceptor);
+
+        }
+       return builder.build();
+    }
+
 
     @Provides
     @Singleton
@@ -76,7 +126,7 @@ public class AppModule {
     @Singleton
     public Gson getGson(){
         return new GsonBuilder()
-                //в этом промежутки можно еще разные методы писать например GsonBuilderData
+                //в этом промежутке можно еще разные методы писать например GsonBuilderData
                 .create();
     }
 

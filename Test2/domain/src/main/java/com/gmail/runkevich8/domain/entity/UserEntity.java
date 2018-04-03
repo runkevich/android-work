@@ -9,9 +9,9 @@ public class UserEntity {
     private String profileUrl;
     private boolean gender;
 
-    public UserEntity(String userName, int age, String profileUrl){
-
-    }
+//    public UserEntity(String userName, int age, String profileUrl){
+//
+//    }
 
     public UserEntity(String username, int age, String profileUrl,boolean gender) {
         this.username = username;

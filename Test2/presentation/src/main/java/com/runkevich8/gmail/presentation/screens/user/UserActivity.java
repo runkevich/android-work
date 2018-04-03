@@ -1,6 +1,9 @@
 package com.runkevich8.gmail.presentation.screens.user;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.test.R;
@@ -21,31 +24,19 @@ public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,Use
         return ViewModelProviders.of(this).get(UserViewModel.class);
       //  return new UserViewModel();
     }
-//
-//    @Override
-//    public void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//        binding.cw8Profileurl.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                //Toast.makeText(getBaseContext(), "OOOOOO", Toast.LENGTH_LONG).show();
-//
-//            }
-//        });
-//
-//    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        binding.recyclePR.setLayoutManager(new LinearLayoutManager(this));
+        binding.recyclePR.setHasFixedSize(true);
+        binding.recyclePR.setAdapter(viewModel.userAdapter);
+
+
+    }
+
 
 }
-//        binding.cw8Age.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
-
-        //RxView.onClick(binding.cw8Age);
-
 
 

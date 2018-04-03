@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.runkevich8.gmail.presentation.screens.main.MainViewModel"/>
+    </data>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -86,6 +93,15 @@
             android:text="@string/hw9"
             android:background="@drawable/button_selector"
             android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/hw_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hw10"
+            android:background="@drawable/button_selector"
+            android:layout_margin="5dp"/>
     </LinearLayout>
 
 </ScrollView>
+</layout>

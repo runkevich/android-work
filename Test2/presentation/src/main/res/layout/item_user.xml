@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xml:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.lang.String" />
+        <variable
+            name="viewModel"
+            type="com.runkevich8.gmail.presentation.screens.user.list.UserItemViewModel" />
+
+    </data>
+
+<LinearLayout
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="60dp"
@@ -11,23 +24,22 @@
     android:layout_marginBottom="20dp">
 
 
-
     <TextView
         android:id="@+id/textView1_cw6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="UserName"/>
+        tools:text="@{viewModel.name}"/>
 
     <TextView
         android:id="@+id/textView2_cw6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
-        tools:text="Some information"/>
+        tools:text="@{viewModel.age}"/>
     <ImageView
         android:id="@+id/image_cw6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/sova_anmation_1"
-        />
+        android:src="@drawable/sova_anmation_1" />
 </LinearLayout>
+</layout>

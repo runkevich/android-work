@@ -33,6 +33,7 @@ ext{
     rxandroidVersion = '2.0.2'
     gsonVersion = '2.8.2'
 
+    okHttpVersion='3.10.0'
 
     dependencies = [
 
@@ -51,11 +52,16 @@ ext{
 
         rxAndroid:  "io.reactivex.rxjava2:rxandroid:$rxandroidVersion",
         rxjava2: "io.reactivex.rxjava2:rxjava:$rxjavaVersion",
-
         retrofit :"com.squareup.retrofit2:retrofit:$retrofitVersion",
 
-        gson: "com.google.code.gson:gson:$gsonVersion"
+        okHttp: "com.squareup.okhttp3:okhttp:$okHttpVersion",
+        okHttpLogging: "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
 
+        room: "android.arch.persistence.room:runtime:$archComponentVersion",
+        roomCompiler: "android.arch.persistence.room:compiler:$archComponentVersion",
+        roomRx:"android.arch.persistence.room:rxjava2:$archComponentVersion",
+
+        gson: "com.google.code.gson:gson:$gsonVersion"
     ]
 
 }

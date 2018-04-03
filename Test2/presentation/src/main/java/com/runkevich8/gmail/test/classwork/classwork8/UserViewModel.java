@@ -6,7 +6,7 @@
 //import android.databinding.ObservableInt;
 //import android.util.Log;
 //
-//import com.gmail.runkevich8.domain.entity.UserEntity;
+//import com.gmail.runkevich8.domain.entity.User;
 //import com.runkevich8.gmail.presentation.base.BaseViewModel;
 //
 //import io.reactivex.Observable;
@@ -27,12 +27,12 @@
 //    @Override //сами сделали - не андроидовский
 //    public void onResume() {
 //        progressVisible.set(true);
-//        Observable.create(new ObservableOnSubscribe<UserEntity>() {
+//        Observable.create(new ObservableOnSubscribe<User>() {
 //            @Override
-//            public void subscribe(ObservableEmitter<UserEntity> emitter) throws Exception {
+//            public void subscribe(ObservableEmitter<User> emitter) throws Exception {
 //                Thread.sleep(5000);
 //
-//                UserEntity entity = new UserEntity("my username",20,
+//                User entity = new User("my username",20,
 //                        "http://www.freeiconspng.com/uploads/spongebob-and-patrick-png-6.png");
 //
 //                emitter.onNext(entity);//переекинь данне какие-то в UI поток
@@ -46,14 +46,14 @@
 //                .observeOn(AndroidSchedulers.mainThread())     // observeOn ---- в каком потоке получить результат
 //
 //
-//                .subscribe(new Observer<UserEntity>() {
+//                .subscribe(new Observer<User>() {
 //                    @Override
 //                    public void onSubscribe(Disposable d) {
 //                        Log.e("OOOOOOOOOOOOOOOO","onSubscribe");
 //                    }
 //
 //                    @Override
-//                    public void onNext(UserEntity userEntity) {
+//                    public void onNext(User userEntity) {
 //                        Log.e("OOOOOOOOOOOOOOOO","onNext");
 //
 //                        username.set(userEntity.getUsername());

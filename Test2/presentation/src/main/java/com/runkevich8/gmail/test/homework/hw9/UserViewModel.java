@@ -23,13 +23,13 @@ public class UserViewModel {
         observableUser = Observable.just(new User("Katya ","Runkevich","22",
                                "http://www.freeiconspng.com/uploads/spongebob-and-patrick-png-6.png",true));
 //        progressVisible.set(true);
-//        Observable.create(new ObservableOnSubscribe<UserEntity>() {
+//        Observable.create(new ObservableOnSubscribe<User>() {
 //            @Override
-//            public void subscribe(ObservableEmitter<UserEntity> emitter) throws Exception {
+//            public void subscribe(ObservableEmitter<User> emitter) throws Exception {
 //                Thread.sleep(2000);
 //
-//                UserEntity entity =
-//                        new UserEntity("Katya Runkevich",22,
+//                User entity =
+//                        new User("Katya Runkevich",22,
 //                                "http://www.freeiconspng.com/uploads/spongebob-and-patrick-png-6.png",true);
 //                emitter.onNext(entity);//переекинь данне какие-то в UI поток
 //
@@ -43,16 +43,16 @@ public class UserViewModel {
 //                .observeOn(AndroidSchedulers.mainThread())     // observeOn ---- в каком потоке получить результат
 //
 
-//               observableUser.subscribe(new Consumer<UserEntity>() {
+//               observableUser.subscribe(new Consumer<User>() {
 //                    @Override
-//                    public void accept(UserEntity userEntity) throws Exception {
+//                    public void accept(User userEntity) throws Exception {
 //                        username.set(userEntity.getUsername());
 //                        profileurl.set(userEntity.getProfileUrl());
 //                        age.set(userEntity.getAge());
 //                        gender.set(userEntity.isGender());
 //                    }
 //                })
-//                .subscribe(new Observer<UserEntity>() {
+//                .subscribe(new Observer<User>() {
 //
 //                    @Override
 //                    public void onSubscribe(Disposable d) {
@@ -61,7 +61,7 @@ public class UserViewModel {
 //                    }
 //
 //                    @Override
-//                    public void onNext(UserEntity userEntity) {
+//                    public void onNext(User userEntity) {
 //                        Log.e("OOOOOOOOOOOOOOOO","onNext");
 //
 //                        username.set(userEntity.getUsername());

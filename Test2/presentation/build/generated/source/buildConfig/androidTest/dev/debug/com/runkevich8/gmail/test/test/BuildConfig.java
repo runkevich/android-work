@@ -12,4 +12,6 @@ public final class BuildConfig {
   public static final String VERSION_NAME = "1.0";
   // Fields from product flavor: dev
   public static final String API_URL = "http://test";
+  // Fields from default config.
+  public static final String MY_CLOUD_API = "https://api.backendless.com/DE34C51E-BB62-9A44-FFFE-BE72ACC3AB00/D7B2D441-A243-DFCB-FFE7-D81644A31200/";
 }

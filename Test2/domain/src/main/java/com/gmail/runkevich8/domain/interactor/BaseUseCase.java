@@ -15,16 +15,16 @@ public abstract class BaseUseCase {
     //поток в котором будем выполнять все сложные запросы(другой поток , не UI)
     protected Scheduler threadExecuteion;
 
-    public BaseUseCase(PostExecutionThread postExecuteionThread){
+    public BaseUseCase(PostExecutionThread postExecutionThread){
 
-        this.postExecuteionThread = postExecuteionThread.getScheduler();
+        this.postExecuteionThread = postExecutionThread.getScheduler();
         this.threadExecuteion = Schedulers.io();
 
     }
     //2 способ
-    public BaseUseCase(PostExecutionThread postExecuteionThread,ThreadExecutor threadExecuteion){
+    public BaseUseCase(PostExecutionThread postExecutionThread,ThreadExecutor threadExecuteion){
 
-        this.postExecuteionThread = postExecuteionThread.getScheduler();
+        this.postExecuteionThread = postExecutionThread.getScheduler();
         this.threadExecuteion = Schedulers.from(threadExecuteion);
 
     }

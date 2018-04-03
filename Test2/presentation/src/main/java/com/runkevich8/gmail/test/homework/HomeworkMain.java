@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.runkevich8.gmail.test.R;
-import com.runkevich8.gmail.test.homework.hw1.Homework1Activity;
+
 import com.runkevich8.gmail.test.homework.hw2.Homework2Activity;
 import com.runkevich8.gmail.test.homework.hw3.Homework3Activity;
 import com.runkevich8.gmail.test.homework.hw4.Homework4Activity;
@@ -51,9 +51,9 @@ public class HomeworkMain extends AppCompatActivity {
         View.OnClickListener hw1Click = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeworkMain.this,
-                        Homework1Activity.class);
-                startActivity(intent);
+               // Intent intent = new Intent(HomeworkMain.this,
+             //           Homework1Activity.class);
+             //   startActivity(intent);
             }
         };
 

@@ -6,10 +6,13 @@ import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 import android.util.Log;
 
+import com.gmail.runkevich8.data.entity.Error;
+import com.gmail.runkevich8.data.entity.ErrorType;
 import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.interactor.GetUserByIdUseCase;
-import com.runkevich8.gmail.app.App;
+import com.runkevich8.gmail.presentation.base.BaseAdapter;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
+import com.runkevich8.gmail.presentation.screens.user.list.UserAdapter;
 
 import javax.inject.Inject;
 
@@ -23,6 +26,8 @@ public class UserViewModel extends BaseViewModel {
     public GetUserByIdUseCase getUserByIdUseCase ;
            // new GetUserByIdUseCase(new UIThread(),new UserRepositoryImpl());
 
+    public UserAdapter userAdapter = new UserAdapter();
+
     public final ObservableField<String> username = new ObservableField<String>("");
     public final ObservableField<String> profileurl = new ObservableField<String>("");
     public final ObservableInt age = new ObservableInt();
@@ -31,12 +36,46 @@ public class UserViewModel extends BaseViewModel {
 
     @Override
     public void createInject() {
-        App.getAppComponent().inject(this);
+       // App.getAppComponent().inject(UserViewModel.class);
     }
     //затем будет его создавать андроид
     public UserViewModel() {
 
         super();
+
+        //подписываемся на клик
+        userAdapter
+                .observeClick()
+                .subscribe(new Observer<BaseAdapter.ItemEntity>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseAdapter.ItemEntity itemEntity) {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                        if (e instanceof Error){
+                            Error myError = (Error) e;
+                            if(myError.getVeryBiError() == ErrorType.NO_INTERNET){
+
+                            }else if (myError.getVeryBiError() == ErrorType.SERVER_NOT_AVALIBLE){
+
+                            }
+                        } else {}
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
 
         progressVisible.set(true);
         getUserByIdUseCase
@@ -57,6 +96,10 @@ public class UserViewModel extends BaseViewModel {
                         profileurl.set(userEntity.getProfileUrl());
                         age.set(userEntity.getAge());
                         gender.set(userEntity.isGender());
+
+
+                       // userAdapter.setItems(list);
+
 
                     }
 

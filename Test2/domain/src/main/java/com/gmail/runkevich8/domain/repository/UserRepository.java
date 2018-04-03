@@ -13,8 +13,9 @@ import io.reactivex.Observable;
 public interface UserRepository {
 
     Observable<UserEntity> get (String id);
-    Observable<List<UserEntity>> get();
+   // Observable<List<UserEntity>> get();
     Completable save();
     Completable remove();
+    Observable<List<UserEntity>> getList();
 
 }

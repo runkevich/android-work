@@ -5,7 +5,6 @@ import android.content.Context;
 
 import com.gmail.runkevich8.data.entity.User;
 import com.gmail.runkevich8.data.net.RestService;
-import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.repository.UserRepository;
 
 import java.util.ArrayList;
@@ -26,15 +25,15 @@ public class UserRepositoryImpl implements UserRepository{
     }
 
     @Override
-    public Observable<UserEntity> get(String id) {
+    public Observable<com.gmail.runkevich8.domain.entity.UserEntity> get(String id) {
 
 //
-//        return   Observable.create(new ObservableOnSubscribe<UserEntity>() {
+//        return   Observable.create(new ObservableOnSubscribe<User>() {
 //            @Override
-//           public void subscribe(ObservableEmitter<UserEntity> emitter) throws Exception {
+//           public void subscribe(ObservableEmitter<User> emitter) throws Exception {
 //                Thread.sleep(2000);
-//                UserEntity entity =
-//                        new UserEntity("Katya Runkevich",22,
+//                User entity =
+//                        new User("Katya Runkevich",22,
 //                                "http://www.freeiconspng.com/uploads/spongebob-and-patrick-png-6.png",true);
 //                emitter.onNext(entity);//переекинь данне какие-то в UI поток
 //                emitter.onComplete();//закончили с этими данными
@@ -43,30 +42,32 @@ public class UserRepositoryImpl implements UserRepository{
 //        });
         return restService
                 .loadUserById(id)
-                .map(new Function<User, UserEntity>() {
+                .map(new Function<User, com.gmail.runkevich8.domain.entity.UserEntity>() {
                     @Override
-                    public UserEntity apply(User user) throws Exception {
-                        return new UserEntity(user.getUserName(),
+                    public com.gmail.runkevich8.domain.entity.UserEntity apply(User user) throws Exception {
+                        return new com.gmail.runkevich8.domain.entity.UserEntity(user.getUserName(),
                                 user.getAge(),
-                                user.getProfileUrl());
+                                user.getProfileUrl(),true);
                     }
                 });
     }
 
+
+
     @Override
-    public Observable<List<UserEntity>> get() {
-       // return Observable.just(new ArrayList<UserEntity>());
+    public Observable<List<com.gmail.runkevich8.domain.entity.UserEntity>> getList() {
+       // return Observable.just(new ArrayList<User>());
         return  restService
                 .loadUsers()
-                .map(new Function<List<User>, List<UserEntity>>() {
+                .map(new Function<List<User>, List<com.gmail.runkevich8.domain.entity.UserEntity>>() {
                     @Override
-                    public List<UserEntity> apply(List<User> users) throws Exception {
+                    public List<com.gmail.runkevich8.domain.entity.UserEntity> apply(List<User> userEntities) throws Exception {
 
-                        List<UserEntity> list = new ArrayList<>();
-                        for (User user: users){
-                           list.add(new UserEntity(user.getUserName(),
+                        List<com.gmail.runkevich8.domain.entity.UserEntity> list = new ArrayList<>();
+                        for (User user : userEntities){
+                           list.add(new com.gmail.runkevich8.domain.entity.UserEntity(user.getUserName(),
                             user.getAge(),
-                            user.getProfileUrl()));
+                            user.getProfileUrl(),true));
                         }
                         return null;
                     }
@@ -82,4 +83,6 @@ public class UserRepositoryImpl implements UserRepository{
     public Completable remove() {
         return null;
     }
+
+
 }
