@@ -52,14 +52,17 @@ ext{
 
         rxAndroid:  "io.reactivex.rxjava2:rxandroid:$rxandroidVersion",
         rxjava2: "io.reactivex.rxjava2:rxjava:$rxjavaVersion",
-        retrofit :"com.squareup.retrofit2:retrofit:$retrofitVersion",
 
+        retrofit :"com.squareup.retrofit2:retrofit:$retrofitVersion",
+        retrofitConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+        retrofitRx: "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
         okHttp: "com.squareup.okhttp3:okhttp:$okHttpVersion",
         okHttpLogging: "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
 
         room: "android.arch.persistence.room:runtime:$archComponentVersion",
         roomCompiler: "android.arch.persistence.room:compiler:$archComponentVersion",
-        roomRx:"android.arch.persistence.room:rxjava2:$archComponentVersion",
+        roomCompilerRx: "android.arch.persistence.room:rxjava2:$archComponentVersion",
+
 
         gson: "com.google.code.gson:gson:$gsonVersion"
     ]

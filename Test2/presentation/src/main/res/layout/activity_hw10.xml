@@ -15,7 +15,7 @@
             android:id="@+id/recyclePR"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:entries="@{viewModel.userEntities}" />
+             />
 
         <Button
             android:layout_width="110dp"

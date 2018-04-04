@@ -10,6 +10,7 @@ import com.gmail.runkevich8.data.entity.Error;
 import com.gmail.runkevich8.data.entity.ErrorType;
 import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.interactor.GetUserByIdUseCase;
+import com.runkevich8.gmail.app.App;
 import com.runkevich8.gmail.presentation.base.BaseAdapter;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
 import com.runkevich8.gmail.presentation.screens.user.list.UserAdapter;
@@ -36,7 +37,7 @@ public class UserViewModel extends BaseViewModel {
 
     @Override
     public void createInject() {
-       // App.getAppComponent().inject(UserViewModel.class);
+        App.getAppComponent().inject(this);
     }
     //затем будет его создавать андроид
     public UserViewModel() {

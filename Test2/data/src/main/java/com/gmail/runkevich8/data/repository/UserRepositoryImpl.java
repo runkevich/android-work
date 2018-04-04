@@ -45,7 +45,7 @@ public class UserRepositoryImpl implements UserRepository{
                 .map(new Function<User, com.gmail.runkevich8.domain.entity.UserEntity>() {
                     @Override
                     public com.gmail.runkevich8.domain.entity.UserEntity apply(User user) throws Exception {
-                        return new com.gmail.runkevich8.domain.entity.UserEntity(user.getUserName(),
+                        return new com.gmail.runkevich8.domain.entity.UserEntity(user.getUsername(),
                                 user.getAge(),
                                 user.getProfileUrl(),true);
                     }
@@ -65,7 +65,7 @@ public class UserRepositoryImpl implements UserRepository{
 
                         List<com.gmail.runkevich8.domain.entity.UserEntity> list = new ArrayList<>();
                         for (User user : userEntities){
-                           list.add(new com.gmail.runkevich8.domain.entity.UserEntity(user.getUserName(),
+                           list.add(new com.gmail.runkevich8.domain.entity.UserEntity(user.getUsername(),
                             user.getAge(),
                             user.getProfileUrl(),true));
                         }

@@ -1,7 +1,7 @@
 package com.runkevich8.gmail.injection;
 
 
-import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel;
+import com.runkevich8.gmail.presentation.screens.user.UserViewModel;
 
 import javax.inject.Singleton;
 
@@ -11,7 +11,7 @@ import dagger.Component;
 @Component(modules = {AppModule.class})
 public interface AppComponent {
 
-    public void inject(UserEntityViewModel userViewModel);
+    public void inject(UserViewModel userViewModel);
 
 
 }

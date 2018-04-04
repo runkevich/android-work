@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name="com.runkevich8.gmail.presentation.screens.main.MainActivity">
+        <activity android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -35,7 +35,7 @@
             android:parentActivityName=".homework.HomeworkMain">
 
         </activity>
-        <activity android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity" />
+
         <activity android:name=".classwork.classwork7.Classwork7Activity"
             android:parentActivityName=".homework.HomeworkMain">
         </activity>

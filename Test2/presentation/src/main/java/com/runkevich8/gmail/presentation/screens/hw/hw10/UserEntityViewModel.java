@@ -10,7 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.entity.UserProfileEntity;
 import com.gmail.runkevich8.domain.interactor.GetUserListUseCase;
-import com.runkevich8.gmail.app.App;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
 
 import java.util.List;
@@ -21,6 +20,7 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 public class UserEntityViewModel extends  BaseViewModel {
+
 
     @Inject
     public GetUserListUseCase profileListUseCase;
@@ -58,7 +58,7 @@ public class UserEntityViewModel extends  BaseViewModel {
                 });
     }
     public UserEntityViewModel() {
-        App.getAppComponent().inject(this);
+       // App.getAppComponent().inject(this);
 
     }
 
@@ -70,8 +70,8 @@ public class UserEntityViewModel extends  BaseViewModel {
     @BindingAdapter("android:entries")
     public static void setAdaptRW(RecyclerView recyclerView, ObservableField<List<UserProfileEntity>> users) {
         RecyclerViewAdapter adapterRV = ( RecyclerViewAdapter) recyclerView.getAdapter();
-        if (users.get() != null)
-            adapterRV.setUsers(users.get());
+        if (users.get() != null){}
+          //  adapterRV.setUsers(users.get());
     }
 
     public void addNewUser() {

@@ -28,7 +28,8 @@
         android:id="@+id/textView1_cw6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@{viewModel.name}"/>
+        android:text="@{viewModel.name}"
+        tools:text="Username" />
 
     <TextView
         android:id="@+id/textView2_cw6"
