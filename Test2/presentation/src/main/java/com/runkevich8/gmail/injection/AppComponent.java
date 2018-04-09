@@ -1,7 +1,9 @@
 package com.runkevich8.gmail.injection;
 
 
+import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel;
 import com.runkevich8.gmail.presentation.screens.user.UserViewModel;
+import com.runkevich8.gmail.presentation.screens.usermvp.SingUserPresenter;
 
 import javax.inject.Singleton;
 
@@ -11,7 +13,18 @@ import dagger.Component;
 @Component(modules = {AppModule.class})
 public interface AppComponent {
 
-    public void inject(UserViewModel userViewModel);
+    void inject(UserViewModel userViewModel);
+
+    void inject(UserEntityViewModel userEntityViewModel);
+
+    void inject(SingUserPresenter singUserPresenter);
+
+
+//
+//    void inject(AddUserViewModel addNewUser);
+//
+//    void inject(UserPFViewModel userPFViewModel);//указываем в каком классе будут произведена сборка
+//    //объекта требующего инжекции
 
 
 }

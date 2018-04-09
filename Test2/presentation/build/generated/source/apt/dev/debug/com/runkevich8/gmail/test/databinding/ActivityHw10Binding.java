@@ -14,8 +14,7 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.recyclePR, 1);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -30,11 +29,12 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityHw10Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        super(bindingComponent, root, 0);
+        super(bindingComponent, root, 1);
         final Object[] bindings = mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds);
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[1];
+        this.recyclePR.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -43,7 +43,7 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -72,6 +72,11 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
 
     public void setViewModel(@Nullable com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel ViewModel) {
         this.mViewModel = ViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x2L;
+        }
+        notifyPropertyChanged(BR.viewModel);
+        super.requestRebind();
     }
     @Nullable
     public com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel getViewModel() {
@@ -81,6 +86,17 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
+            case 0 :
+                return onChangeViewModelUsers((android.databinding.ObservableField<java.util.List<com.gmail.runkevich8.domain.entity.UserEntity>>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeViewModelUsers(android.databinding.ObservableField<java.util.List<com.gmail.runkevich8.domain.entity.UserEntity>> ViewModelUsers, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
@@ -92,7 +108,32 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        android.databinding.ObservableField<java.util.List<com.gmail.runkevich8.domain.entity.UserEntity>> viewModelUsers = null;
+        java.util.List<com.gmail.runkevich8.domain.entity.UserEntity> viewModelUsersGet = null;
+        com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel viewModel = mViewModel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewModel != null) {
+                    // read viewModel.users
+                    viewModelUsers = viewModel.users;
+                }
+                updateRegistration(0, viewModelUsers);
+
+
+                if (viewModelUsers != null) {
+                    // read viewModel.users.get()
+                    viewModelUsersGet = viewModelUsers.get();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel.setAdaptRW(this.recyclePR, viewModelUsers);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -127,8 +168,9 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
         return new ActivityHw10Binding(bindingComponent, view);
     }
     /* flag mapping
-        flag 0 (0x1L): viewModel
-        flag 1 (0x2L): null
+        flag 0 (0x1L): viewModel.users
+        flag 1 (0x2L): viewModel
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

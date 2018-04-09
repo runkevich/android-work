@@ -9,11 +9,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
-import com.runkevich8.gmail.presentation.base.BaseViewModel;
+
+import com.runkevich8.gmail.presentation.base.Router;
 import com.runkevich8.gmail.test.R;
+import com.runkevich8.gmail.test.databinding.ActivityHw10Binding;
 
 
-public class ActivityRetrofitHw10 extends BaseMvvmActivity implements RecyclerViewAdapter.OnClickListener{
+public class ActivityRetrofitHw10 extends BaseMvvmActivity<ActivityHw10Binding, UserEntityViewModel,Router> implements RecyclerViewAdapter.OnClickListener{
 
     private RecyclerViewAdapter adaptRV;
     public static String id = "";
@@ -24,8 +26,13 @@ public class ActivityRetrofitHw10 extends BaseMvvmActivity implements RecyclerVi
     }
 
     @Override
-    public BaseViewModel provideViewModel() {
+    public UserEntityViewModel provideViewModel() {
         return ViewModelProviders.of(this).get(UserEntityViewModel.class);
+    }
+
+    @Override
+    public Router provideRouter() {
+        return null;
     }
 
 
@@ -34,7 +41,8 @@ public class ActivityRetrofitHw10 extends BaseMvvmActivity implements RecyclerVi
         super.onCreate(savedInstanceState);
         adaptRV = new RecyclerViewAdapter();
         adaptRV.setListener(this);
-        RecyclerView recyclerView = binding.getRoot().findViewById(R.id.recyclePR);
+        RecyclerView recyclerView = binding.recyclePR;
+
         recyclerView.setAdapter(adaptRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);

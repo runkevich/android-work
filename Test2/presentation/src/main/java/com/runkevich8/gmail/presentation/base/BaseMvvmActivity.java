@@ -10,14 +10,20 @@ import android.support.v7.app.AppCompatActivity;
 import com.runkevich8.gmail.test.BR;
 
 public abstract class  BaseMvvmActivity<Binding extends ViewDataBinding,
-        ViewModel extends BaseViewModel>
+        ViewModel extends BaseViewModel , R extends Router>
         extends AppCompatActivity {
 
     protected ViewModel viewModel;
     protected Binding binding;
 
-    public abstract int provideLayoutId();      //для того,чтобы найти Layout
-    public abstract ViewModel provideViewModel();//нужен для поиска модели
+    @Nullable
+    protected R router; //роутер может быть нулем (при повороте например)
+
+
+
+    public abstract int provideLayoutId();        //для того,чтобы найти Layout
+    public abstract ViewModel provideViewModel(); //нужен для поиска модели
+    public abstract R provideRouter();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +32,9 @@ public abstract class  BaseMvvmActivity<Binding extends ViewDataBinding,
         viewModel = provideViewModel();
         binding = DataBindingUtil.setContentView(this, provideLayoutId());
         binding.setVariable(BR.viewModel,viewModel);
+
+        router = provideRouter();
+        viewModel.attachRouter(router);
     }
 
     @Override
@@ -50,5 +59,12 @@ public abstract class  BaseMvvmActivity<Binding extends ViewDataBinding,
     protected void onStop() {
         super.onStop();
         viewModel.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        router = null;
+        viewModel.detachRouter();
     }
 }

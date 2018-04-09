@@ -39,11 +39,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Holder holderT = (Holder) holder;
         final UserEntity entity = users.get(position);
-       // holderT.userProfileBinding.setUser(entity);
+        holderT.userProfileBinding.setUserProfile(entity);
         holderT.userProfileBinding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String id = entity.getUsername();
+                String id = entity.getObjectId();
                 listener.onClick(id);
             }
         });

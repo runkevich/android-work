@@ -61,6 +61,9 @@ dependencies {
     implementation dependency.supportV4
     implementation dependency.supportAppcompat
     implementation dependency.supportDesign
+    implementation dependency.constraintLayout
+
+
     implementation dependency.rxAndroid
 
     implementation dependency.archComponentsExtention

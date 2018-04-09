@@ -1,68 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/cw8_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <data>
+            android:textSize="24sp"
+            bind:layout_conversion_absoluteHeight="32dp"
+            bind:layout_conversion_absoluteWidth="1dp"
+            bind:layout_editor_absoluteX="192dp"
+            bind:layout_editor_absoluteY="0dp" />
 
-        <import type="android.view.View" />
+        <TextView
+            android:id="@+id/cw8_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        <import type="java.lang.String" />
-        <variable
-            name="viewModel"
-            type="com.runkevich8.gmail.presentation.screens.user.UserViewModel" />
+            android:textSize="24sp"
+            bind:layout_conversion_absoluteHeight="32dp"
+            bind:layout_conversion_absoluteWidth="1dp"
+            bind:layout_editor_absoluteX="192dp"
+            bind:layout_editor_absoluteY="32dp" />
 
-    </data>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            bind:layout_conversion_absoluteHeight="48dp"
+            bind:layout_conversion_absoluteWidth="48dp"
+            bind:layout_editor_absoluteX="168dp"
+            bind:layout_editor_absoluteY="64dp" />
 
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
-<TextView
-    android:id="@+id/cw8_username"
-    android:textColor="@{viewModel.gender ? @color/colorAccent : @color/colorPrimary }"
-    android:textSize="24sp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@{viewModel.username}"/>
-    <!--<ImageView-->
-        <!--android:id="@+id/cw8_profileurl"-->
-        <!--android:textSize="24sp"-->
-        <!--android:layout_width="150dp"-->
-        <!--android:layout_height="150dp"-->
-        <!--app:imageUrl="@{viewModel.profileurl}"-->
-
-        <!--/>-->
-    <TextView
-        android:id="@+id/cw8_age"
-        android:textSize="24sp"
-        android:textColor="@{viewModel.gender ? @color/colorAccent : @color/colorPrimary }"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@{String.valueOf(viewModel.age)}"/>
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-        <!--android:visibility="@{viewModel.progressVisible? View.VISIBLE : View.GONE}"-->
-
-
-    <!--<Button-->
-        <!--android:id="@+id/button_cw8"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:visibility="@{myEntity.buttonVisibilite? View.VISIBLE : View.GONE }"-->
-        <!--android:text="@{myEntity.textButton}"-->
-        <!--android:background="@drawable/button_selector"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:onClick="@{myEntity::buttonClick}"/>-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclePR"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        bind:layout_conversion_absoluteHeight="455dp"
+        bind:layout_conversion_absoluteWidth="384dp"
+        bind:layout_editor_absoluteX="172dp" />
 
-</LinearLayout>
-</layout>
+    </android.support.constraint.ConstraintLayout>
+

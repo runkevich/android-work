@@ -3,8 +3,11 @@ package com.gmail.runkevich8.data.repository;
 
 import android.content.Context;
 
+import com.gmail.runkevich8.data.database.AppDatabase;
+import com.gmail.runkevich8.data.database.UserDatabase;
 import com.gmail.runkevich8.data.entity.User;
 import com.gmail.runkevich8.data.net.RestService;
+import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.repository.UserRepository;
 
 import java.util.ArrayList;
@@ -18,14 +21,15 @@ public class UserRepositoryImpl implements UserRepository{
 
     private Context context;
     private RestService restService;
+    private UserDatabase userDatabase;
 
-    public UserRepositoryImpl(Context context, RestService restService) {
-        this.context = context;
+    public UserRepositoryImpl(RestService restService, AppDatabase appDataBase) {
         this.restService = restService;
+        this.userDatabase = appDataBase.getUserDao();
     }
 
     @Override
-    public Observable<com.gmail.runkevich8.domain.entity.UserEntity> get(String id) {
+    public Observable<UserEntity> get(String id) {
 
 //
 //        return   Observable.create(new ObservableOnSubscribe<User>() {
@@ -42,12 +46,14 @@ public class UserRepositoryImpl implements UserRepository{
 //        });
         return restService
                 .loadUserById(id)
-                .map(new Function<User, com.gmail.runkevich8.domain.entity.UserEntity>() {
+                .map(new Function<User, UserEntity>() {
                     @Override
-                    public com.gmail.runkevich8.domain.entity.UserEntity apply(User user) throws Exception {
-                        return new com.gmail.runkevich8.domain.entity.UserEntity(user.getUsername(),
+                    public UserEntity apply(User user) throws Exception {
+                        return (new UserEntity(user.getUsername(),
+                                user.getProfileUrl(),
                                 user.getAge(),
-                                user.getProfileUrl(),true);
+                                user.isSex(),
+                                user.getObjectId()));
                     }
                 });
     }
@@ -55,34 +61,46 @@ public class UserRepositoryImpl implements UserRepository{
 
 
     @Override
-    public Observable<List<com.gmail.runkevich8.domain.entity.UserEntity>> getList() {
+    public Observable<List<UserEntity>> getList() {
        // return Observable.just(new ArrayList<User>());
         return  restService
                 .loadUsers()
-                .map(new Function<List<User>, List<com.gmail.runkevich8.domain.entity.UserEntity>>() {
+                .map(new Function<List<User>, List<UserEntity>>() {
                     @Override
-                    public List<com.gmail.runkevich8.domain.entity.UserEntity> apply(List<User> userEntities) throws Exception {
+                    public List<UserEntity> apply(List<User> userEntities) throws Exception {
 
-                        List<com.gmail.runkevich8.domain.entity.UserEntity> list = new ArrayList<>();
+                        List<UserEntity> list = new ArrayList<>();
                         for (User user : userEntities){
-                           list.add(new com.gmail.runkevich8.domain.entity.UserEntity(user.getUsername(),
-                            user.getAge(),
-                            user.getProfileUrl(),true));
+                            list.add(new UserEntity(user.getUsername(),
+                                    user.getProfileUrl(),
+                                    user.getAge(),
+                                    user.isSex(),
+                                    user.getObjectId()));
                         }
-                        return null;
+                        return list;
                     }
                 });
     }
 
     @Override
-    public Completable save() {
+    public Completable save(UserEntity entity) {
+//        return restService
+//                .save(new UserEntity(
+//                        entity.getUsername(),
+//                        entity.getAge(),
+//                        entity.getProfileUrl(),true
+//                ));
+        return  null;
+    }
+
+    @Override
+    public Completable addUser(UserEntity entity) {
         return null;
     }
 
     @Override
-    public Completable remove() {
+    public Completable remove(String id) {
         return null;
     }
-
 
 }

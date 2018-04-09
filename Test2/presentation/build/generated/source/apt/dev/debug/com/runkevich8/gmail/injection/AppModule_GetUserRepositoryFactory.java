@@ -1,6 +1,6 @@
 package com.runkevich8.gmail.injection;
 
-import android.content.Context;
+import com.gmail.runkevich8.data.database.AppDatabase;
 import com.gmail.runkevich8.data.net.RestService;
 import com.gmail.runkevich8.domain.repository.UserRepository;
 import dagger.internal.Factory;
@@ -15,37 +15,37 @@ import javax.inject.Provider;
 public final class AppModule_GetUserRepositoryFactory implements Factory<UserRepository> {
   private final AppModule module;
 
-  private final Provider<Context> contextProvider;
-
   private final Provider<RestService> restServiceProvider;
+
+  private final Provider<AppDatabase> appDatabaseProvider;
 
   public AppModule_GetUserRepositoryFactory(
       AppModule module,
-      Provider<Context> contextProvider,
-      Provider<RestService> restServiceProvider) {
+      Provider<RestService> restServiceProvider,
+      Provider<AppDatabase> appDatabaseProvider) {
     this.module = module;
-    this.contextProvider = contextProvider;
     this.restServiceProvider = restServiceProvider;
+    this.appDatabaseProvider = appDatabaseProvider;
   }
 
   @Override
   public UserRepository get() {
     return Preconditions.checkNotNull(
-        module.getUserRepository(contextProvider.get(), restServiceProvider.get()),
+        module.getUserRepository(restServiceProvider.get(), appDatabaseProvider.get()),
         "Cannot return null from a non-@Nullable @Provides method");
   }
 
   public static AppModule_GetUserRepositoryFactory create(
       AppModule module,
-      Provider<Context> contextProvider,
-      Provider<RestService> restServiceProvider) {
-    return new AppModule_GetUserRepositoryFactory(module, contextProvider, restServiceProvider);
+      Provider<RestService> restServiceProvider,
+      Provider<AppDatabase> appDatabaseProvider) {
+    return new AppModule_GetUserRepositoryFactory(module, restServiceProvider, appDatabaseProvider);
   }
 
   public static UserRepository proxyGetUserRepository(
-      AppModule instance, Context context, RestService restService) {
+      AppModule instance, RestService restService, AppDatabase appDatabase) {
     return Preconditions.checkNotNull(
-        instance.getUserRepository(context, restService),
+        instance.getUserRepository(restService, appDatabase),
         "Cannot return null from a non-@Nullable @Provides method");
   }
 }

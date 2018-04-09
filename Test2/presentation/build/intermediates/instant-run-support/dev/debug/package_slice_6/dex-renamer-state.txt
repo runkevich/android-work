@@ -1,4 +1,4 @@
-#Wed Apr 04 14:40:18 MSK 2018
+#Sun Apr 08 01:50:22 MSK 2018
 base.0=D\:\\Java\\android-work\\Test2\\presentation\\build\\intermediates\\transforms\\dexMerger\\dev\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

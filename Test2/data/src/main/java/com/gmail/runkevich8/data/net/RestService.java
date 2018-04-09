@@ -2,6 +2,7 @@ package com.gmail.runkevich8.data.net;
 
 
 import com.gmail.runkevich8.data.entity.Data;
+import com.gmail.runkevich8.data.entity.Error;
 import com.gmail.runkevich8.data.entity.Image;
 import com.gmail.runkevich8.data.entity.User;
 
@@ -10,6 +11,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import io.reactivex.Completable;
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
 
@@ -17,16 +19,22 @@ import io.reactivex.functions.Function;
 public class RestService {
 
     private RestApi restApi;
+    private ErrorTransformers errorTransformers;
 
     @Inject
-    public RestService(RestApi restApi) {
+    public RestService(RestApi restApi, ErrorTransformers errorTransformers) {
         this.restApi = restApi;
+        this.errorTransformers = errorTransformers;
     }
 
     public Observable<List<User>> loadUsers() {
         return restApi
-                .loadUsers();
+                .loadUsers()
+                .compose(errorTransformers.<List<User>, Error>parseHttpError());
     }
+
+
+
 
     public Observable<User> loadUserById(String id) {
         return restApi.loadUserById(id);
@@ -52,5 +60,18 @@ public class RestService {
                         return data.getData();
                     }
                 });
+    }
+
+
+    public Completable save(User user) {
+        return restApi.save(user);
+    }
+
+    public Completable addNewUser(User user) {
+        return restApi.addUser(user);
+    }
+
+    public Completable remove(String id) {
+        return restApi.removeUser(id);
     }
 }

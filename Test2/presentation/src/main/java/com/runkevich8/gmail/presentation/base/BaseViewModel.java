@@ -2,10 +2,14 @@ package com.runkevich8.gmail.presentation.base;
 
 
 import android.arch.lifecycle.ViewModel;
+import android.support.annotation.Nullable;
 
 import io.reactivex.disposables.CompositeDisposable;
 
-public abstract class BaseViewModel extends ViewModel{
+public abstract class BaseViewModel<R extends Router> extends ViewModel{
+
+    @Nullable
+    protected R router; //роутер может быть нулем (при повороте например)
 
     //может всё внутри отписать, как массив disposable
     protected CompositeDisposable compositeDisposable = new CompositeDisposable();
@@ -16,6 +20,15 @@ public abstract class BaseViewModel extends ViewModel{
     }
 
     public abstract void createInject();
+
+    public void attachRouter(R router){
+        this.router = router;
+
+    }
+    public void detachRouter() {
+        this.router = null;
+
+    }
 
     public void onStart(){
 

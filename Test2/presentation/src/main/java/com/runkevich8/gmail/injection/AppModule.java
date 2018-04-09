@@ -5,6 +5,7 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 
 import com.gmail.runkevich8.data.database.AppDatabase;
+import com.gmail.runkevich8.data.net.ErrorTransformers;
 import com.gmail.runkevich8.data.net.RestApi;
 import com.gmail.runkevich8.data.net.RestService;
 import com.gmail.runkevich8.data.repository.UserRepositoryImpl;
@@ -66,11 +67,24 @@ public class AppModule {
 
         return appDatabase;
     }
+//    @Provides
+//    @Singleton
+//    public UserRepository getUserRepository(Context context,
+//                                            RestService restService){
+//        return new UserRepositoryImpl(context,restService);
+//    }
+
+        @Provides
+    @Singleton
+    public UserRepository getUserRepository(RestService restService,
+                                            AppDatabase appDatabase){
+        return new UserRepositoryImpl(restService,appDatabase);
+    }
+
     @Provides
     @Singleton
-    public UserRepository getUserRepository(Context context,
-                                            RestService restService){
-        return new UserRepositoryImpl(context,restService);
+    public RestService getRestService(RestApi restAPI, ErrorTransformers errorTransformers) {
+        return new RestService(restAPI,errorTransformers);
     }
 //______________________________________
     @Provides
@@ -78,7 +92,7 @@ public class AppModule {
     public Retrofit getRetrofit(OkHttpClient okHttpClient,Gson gson){
 
         return  new Retrofit.Builder()
-                .baseUrl("https://api.backendless.com/70E26EEB-3ACD-601D-FF12-541F239F8800/FDBEBFDC-2C3B-E045-FF00-D718E4134700/")
+                .baseUrl("https://api.backendless.com/DE34C51E-BB62-9A44-FFFE-BE72ACC3AB00/D7B2D441-A243-DFCB-FFE7-D81644A31200/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(okHttpClient)

@@ -14,9 +14,12 @@ public class ItemUserBinding extends android.databinding.ViewDataBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.image_cw6, 3);
     }
     // views
+    @NonNull
+    public final android.widget.ImageView imageCw6;
     @NonNull
     private final android.widget.LinearLayout mboundView0;
     @NonNull
@@ -32,7 +35,8 @@ public class ItemUserBinding extends android.databinding.ViewDataBinding  {
 
     public ItemUserBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 2);
-        final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds);
+        this.imageCw6 = (android.widget.ImageView) bindings[3];
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.textView1Cw6 = (android.widget.TextView) bindings[1];

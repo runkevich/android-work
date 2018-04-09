@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:text="@{userProfile.username}"
+            android:text="@{userProfile.fullName}"
             android:textSize="14sp"
             tools:text="Full Name" />
 
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView2"
-            android:text='@{userProfile.username}'
+            android:text='@{userProfile.fullName}'
             tools:text="Gender: male" />
 
         <TextView

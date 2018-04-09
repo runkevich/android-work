@@ -14,13 +14,14 @@ import com.runkevich8.gmail.app.App;
 import com.runkevich8.gmail.presentation.base.BaseAdapter;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
 import com.runkevich8.gmail.presentation.screens.user.list.UserAdapter;
+import com.runkevich8.gmail.presentation.screens.user.list.UserRouter;
 
 import javax.inject.Inject;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class UserViewModel extends BaseViewModel {
+public class UserViewModel extends BaseViewModel<UserRouter> {
 
 
     @Inject
@@ -44,12 +45,17 @@ public class UserViewModel extends BaseViewModel {
 
         super();
 
+        //IMPORTANT - обязательно проверять на ноль роутер!
+        if (router!=null) router.navigateToUser("");
+
         //подписываемся на клик
         userAdapter
                 .observeClick()
                 .subscribe(new Observer<BaseAdapter.ItemEntity>() {
                     @Override
                     public void onSubscribe(Disposable d) {
+
+
 
                     }
 
@@ -64,6 +70,8 @@ public class UserViewModel extends BaseViewModel {
                         if (e instanceof Error){
                             Error myError = (Error) e;
                             if(myError.getVeryBiError() == ErrorType.NO_INTERNET){
+
+                                //сюда тосты с ошибками
 
                             }else if (myError.getVeryBiError() == ErrorType.SERVER_NOT_AVALIBLE){
 
@@ -93,10 +101,10 @@ public class UserViewModel extends BaseViewModel {
                     public void onNext(UserEntity userEntity) {
                         Log.e("OOOOOOOOOOOOOOOO","onNext");
 
-                        username.set(userEntity.getUsername());
-                        profileurl.set(userEntity.getProfileUrl());
+                        username.set(userEntity.getFullName());
+                        profileurl.set(userEntity.getUrlImg());
                         age.set(userEntity.getAge());
-                        gender.set(userEntity.isGender());
+                        gender.set(userEntity.isSex());
 
 
                        // userAdapter.setItems(list);

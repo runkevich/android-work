@@ -8,10 +8,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
+import com.runkevich8.gmail.presentation.screens.user.list.UserRouter;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
 
-public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,UserViewModel> {
+public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,UserViewModel,UserRouter> {
 
    // UserActivity = ActivityUserBinding
     //import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
@@ -32,6 +33,11 @@ public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,Use
     public UserViewModel provideViewModel() {
         return ViewModelProviders.of(this).get(UserViewModel.class);
       //  return new UserViewModel();
+    }
+
+    @Override
+    public UserRouter provideRouter() {
+        return new UserRouter(this);
     }
 
     @Override

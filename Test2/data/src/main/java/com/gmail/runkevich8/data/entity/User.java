@@ -24,8 +24,25 @@ public class User {
     @SerializedName("age")
     private int age;
 
-    @SerializedName("profileUrl")
+    @SerializedName("profileurl")
     private String profileUrl;
+    private boolean sex;
+
+    public User(@NonNull String objectId, String username, int age, String profileUrl,boolean sex ) {
+        this.objectId = objectId;
+        this.username = username;
+        this.age = age;
+        this.profileUrl = profileUrl;
+        this.sex = sex;
+    }
+
+    public boolean isSex() {
+        return sex;
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
+    }
 
     public String getObjectId() {
         return objectId;

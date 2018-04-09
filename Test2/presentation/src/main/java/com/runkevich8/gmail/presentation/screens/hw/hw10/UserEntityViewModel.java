@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.databinding.BindingAdapter;
 import android.databinding.ObservableField;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.gmail.runkevich8.domain.entity.UserEntity;
-import com.gmail.runkevich8.domain.entity.UserProfileEntity;
 import com.gmail.runkevich8.domain.interactor.GetUserListUseCase;
+import com.runkevich8.gmail.app.App;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
 
 import java.util.List;
@@ -34,7 +35,8 @@ public class UserEntityViewModel extends  BaseViewModel {
     @Override
     public void onStart() {
         super.onStart();
-        profileListUseCase.getListUsers()
+        profileListUseCase
+                .getListUsers()
                 .subscribe(new Observer<List<UserEntity>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -58,7 +60,7 @@ public class UserEntityViewModel extends  BaseViewModel {
                 });
     }
     public UserEntityViewModel() {
-       // App.getAppComponent().inject(this);
+        App.getAppComponent().inject(this);
 
     }
 
@@ -67,11 +69,17 @@ public class UserEntityViewModel extends  BaseViewModel {
 
     }
 
+
     @BindingAdapter("android:entries")
-    public static void setAdaptRW(RecyclerView recyclerView, ObservableField<List<UserProfileEntity>> users) {
+    public static void setAdaptRW(RecyclerView recyclerView, ObservableField<List<UserEntity>> users) {
         RecyclerViewAdapter adapterRV = ( RecyclerViewAdapter) recyclerView.getAdapter();
-        if (users.get() != null){}
-          //  adapterRV.setUsers(users.get());
+        if (users.get() != null){
+
+            adapterRV.setUsers(users.get());
+        } else {
+            Log.e("OOOOOOOOOOOO","FFFFFFFFFFFFFFFF");
+        }
+
     }
 
     public void addNewUser() {

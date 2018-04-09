@@ -14,7 +14,7 @@ public class UserItemViewModel extends BaseItemViewModel<UserEntity> {
 
     @Override
     public void setItem(UserEntity userEntity, int position) {
-        name.set(userEntity.getUsername());
+        name.set(userEntity.getFullName());
         age.set(String.valueOf(userEntity.getAge()));
     }
 }

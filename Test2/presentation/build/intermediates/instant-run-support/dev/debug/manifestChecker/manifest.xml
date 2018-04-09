@@ -26,7 +26,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity" >
+        <activity android:name="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,6 +39,10 @@
         </activity>
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10"
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity"
             android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
         </activity>
         <activity

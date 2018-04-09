@@ -11,16 +11,21 @@ import javax.inject.Provider;
 public final class RestService_Factory implements Factory<RestService> {
   private final Provider<RestApi> restApiProvider;
 
-  public RestService_Factory(Provider<RestApi> restApiProvider) {
+  private final Provider<ErrorTransformers> errorTransformersProvider;
+
+  public RestService_Factory(
+      Provider<RestApi> restApiProvider, Provider<ErrorTransformers> errorTransformersProvider) {
     this.restApiProvider = restApiProvider;
+    this.errorTransformersProvider = errorTransformersProvider;
   }
 
   @Override
   public RestService get() {
-    return new RestService(restApiProvider.get());
+    return new RestService(restApiProvider.get(), errorTransformersProvider.get());
   }
 
-  public static RestService_Factory create(Provider<RestApi> restApiProvider) {
-    return new RestService_Factory(restApiProvider);
+  public static RestService_Factory create(
+      Provider<RestApi> restApiProvider, Provider<ErrorTransformers> errorTransformersProvider) {
+    return new RestService_Factory(restApiProvider, errorTransformersProvider);
   }
 }

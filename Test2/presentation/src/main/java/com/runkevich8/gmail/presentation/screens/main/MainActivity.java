@@ -9,15 +9,17 @@ import android.widget.Toast;
 
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
+import com.runkevich8.gmail.presentation.base.Router;
 import com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextActivity;
 import com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10;
+import com.runkevich8.gmail.presentation.screens.user.UserActivity;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.databinding.HomeworkMainBinding;
 
 
 
 
-public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseViewModel> implements View.OnClickListener{
+public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseViewModel,Router> implements View.OnClickListener{
 
 
     @Override
@@ -28,6 +30,11 @@ public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseView
     @Override
     public BaseViewModel provideViewModel() {
         return new MainViewModel();
+    }
+
+    @Override
+    public Router provideRouter() {
+        return null;
     }
 
 
@@ -45,6 +52,7 @@ public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseView
         binding.hw8.setOnClickListener(this);
         binding.hw9.setOnClickListener(this);
         binding.hw10.setOnClickListener(this);
+        binding.hw11Class.setOnClickListener(this);
 
     }
 
@@ -60,6 +68,10 @@ public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseView
                     intent = new Intent(this, ActivityRetrofitHw10.class);
                     startActivity(intent);
                     break;
+            case R.id.hw_11_class:
+                intent = new Intent(this, UserActivity.class);
+                startActivity(intent);
+                break;
             default:
                 Toast.makeText(this, "We are haven't this hw", Toast.LENGTH_SHORT).show();
                 break;

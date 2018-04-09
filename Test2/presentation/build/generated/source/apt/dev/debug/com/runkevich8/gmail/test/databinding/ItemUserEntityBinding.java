@@ -109,7 +109,7 @@ public class ItemUserEntityBinding extends android.databinding.ViewDataBinding  
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String userProfileUsername = null;
+        java.lang.String userProfileFullName = null;
         com.gmail.runkevich8.domain.entity.UserEntity userProfile = mUserProfile;
 
         if ((dirtyFlags & 0x3L) != 0) {
@@ -117,16 +117,16 @@ public class ItemUserEntityBinding extends android.databinding.ViewDataBinding  
 
 
                 if (userProfile != null) {
-                    // read userProfile.username
-                    userProfileUsername = userProfile.getUsername();
+                    // read userProfile.fullName
+                    userProfileFullName = userProfile.getFullName();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, userProfileUsername);
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.textView, userProfileUsername);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, userProfileFullName);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.textView, userProfileFullName);
         }
     }
     // Listener Stub Implementations

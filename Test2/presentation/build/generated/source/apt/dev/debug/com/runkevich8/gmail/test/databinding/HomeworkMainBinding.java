@@ -25,12 +25,15 @@ public class HomeworkMainBinding extends android.databinding.ViewDataBinding  {
         sViewsWithIds.put(R.id.hw_8, 8);
         sViewsWithIds.put(R.id.hw_9, 9);
         sViewsWithIds.put(R.id.hw_10, 10);
+        sViewsWithIds.put(R.id.hw_11_class, 11);
     }
     // views
     @NonNull
     public final android.widget.Button hw1;
     @NonNull
     public final android.widget.Button hw10;
+    @NonNull
+    public final android.widget.Button hw11Class;
     @NonNull
     public final android.widget.Button hw2;
     @NonNull
@@ -58,9 +61,10 @@ public class HomeworkMainBinding extends android.databinding.ViewDataBinding  {
 
     public HomeworkMainBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds);
         this.hw1 = (android.widget.Button) bindings[1];
         this.hw10 = (android.widget.Button) bindings[10];
+        this.hw11Class = (android.widget.Button) bindings[11];
         this.hw2 = (android.widget.Button) bindings[2];
         this.hw3 = (android.widget.Button) bindings[3];
         this.hw4 = (android.widget.Button) bindings[4];

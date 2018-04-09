@@ -21,6 +21,7 @@ ext{
     buildToolsVersion = "27.0.2"
     minSdkVersion = 18
     targetSdkVersion = 27
+    constraintLayoutVersion = '1.0.2'
 
     archComponentVersion = '1.0.0'
     daggerVersion = '2.15'
@@ -40,6 +41,8 @@ ext{
         supportAppcompat: "com.android.support:appcompat-v7:$buildToolsVersion",
         supportV4:  "com.android.support:support-v4:$buildToolsVersion",
         supportDesign: "com.android.support:design:$buildToolsVersion",
+
+        constraintLayout: "com.android.support.constraint:constraint-layout:$constraintLayoutVersion",
 
         androidBindingCompiler: "com.android.databinding:compiler:$androidBindingCompiler",
 

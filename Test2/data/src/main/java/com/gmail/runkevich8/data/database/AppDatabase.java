@@ -9,6 +9,6 @@ import com.gmail.runkevich8.data.entity.User;
 @Database(entities = {User.class},version = 1)
 public abstract class AppDatabase extends RoomDatabase{
 
-    public abstract UserDao getUserDao();
+    public abstract UserDatabase getUserDao();
 
 }
