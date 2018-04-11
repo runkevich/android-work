@@ -42,6 +42,14 @@
             android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
         </activity>
         <activity
+            android:name="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10_1"
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10" >
+        </activity>
+        <activity
+            android:name="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10_2"
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10" >
+        </activity>
+        <activity
             android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity"
             android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
         </activity>

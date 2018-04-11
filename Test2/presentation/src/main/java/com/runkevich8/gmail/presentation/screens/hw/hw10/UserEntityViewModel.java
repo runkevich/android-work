@@ -74,7 +74,6 @@ public class UserEntityViewModel extends  BaseViewModel {
     public static void setAdaptRW(RecyclerView recyclerView, ObservableField<List<UserEntity>> users) {
         RecyclerViewAdapter adapterRV = ( RecyclerViewAdapter) recyclerView.getAdapter();
         if (users.get() != null){
-
             adapterRV.setUsers(users.get());
         } else {
             Log.e("OOOOOOOOOOOO","FFFFFFFFFFFFFFFF");
@@ -83,7 +82,7 @@ public class UserEntityViewModel extends  BaseViewModel {
     }
 
     public void addNewUser() {
-        Intent intent = new Intent(context, ActivityRetrofitHw10.class );
+        Intent intent = new Intent(context, ActivityRetrofitHw10_2.class );
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

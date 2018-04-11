@@ -15,8 +15,7 @@ public class ItemUserEntityBinding extends android.databinding.ViewDataBinding  
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.textView2, 3);
-        sViewsWithIds.put(R.id.idUser, 4);
+        sViewsWithIds.put(R.id.idUser, 2);
     }
     // views
     @NonNull
@@ -25,10 +24,6 @@ public class ItemUserEntityBinding extends android.databinding.ViewDataBinding  
     private final android.widget.RelativeLayout mboundView0;
     @NonNull
     private final android.widget.TextView mboundView1;
-    @NonNull
-    public final android.widget.TextView textView;
-    @NonNull
-    public final android.widget.TextView textView2;
     // variables
     @Nullable
     private com.gmail.runkevich8.domain.entity.UserEntity mUserProfile;
@@ -38,15 +33,12 @@ public class ItemUserEntityBinding extends android.databinding.ViewDataBinding  
 
     public ItemUserEntityBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
-        this.idUser = (android.widget.TextView) bindings[4];
+        final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
+        this.idUser = (android.widget.TextView) bindings[2];
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (android.widget.TextView) bindings[1];
         this.mboundView1.setTag(null);
-        this.textView = (android.widget.TextView) bindings[2];
-        this.textView.setTag(null);
-        this.textView2 = (android.widget.TextView) bindings[3];
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -126,7 +118,6 @@ public class ItemUserEntityBinding extends android.databinding.ViewDataBinding  
             // api target 1
 
             android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, userProfileFullName);
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.textView, userProfileFullName);
         }
     }
     // Listener Stub Implementations

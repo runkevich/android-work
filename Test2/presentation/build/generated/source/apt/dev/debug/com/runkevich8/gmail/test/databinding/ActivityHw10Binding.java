@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
 @javax.annotation.Generated("Android Data Binding")
-public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
+public class ActivityHw10Binding extends android.databinding.ViewDataBinding implements android.databinding.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,29 +14,40 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.layou_rv, 3);
     }
     // views
     @NonNull
+    public final android.widget.LinearLayout layouRv;
+    @NonNull
     private final android.widget.RelativeLayout mboundView0;
+    @NonNull
+    private final android.widget.Button mboundView2;
     @NonNull
     public final android.support.v7.widget.RecyclerView recyclePR;
     // variables
     @Nullable
     private com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel mViewModel;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback1;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ActivityHw10Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 1);
-        final Object[] bindings = mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds);
+        this.layouRv = (android.widget.LinearLayout) bindings[3];
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView2 = (android.widget.Button) bindings[2];
+        this.mboundView2.setTag(null);
         this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[1];
         this.recyclePR.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback1 = new android.databinding.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -129,6 +140,11 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView2.setOnClickListener(mCallback1);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
@@ -137,6 +153,22 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding  {
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewModel
+        com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel viewModel = mViewModel;
+        // viewModel != null
+        boolean viewModelJavaLangObjectNull = false;
+
+
+
+        viewModelJavaLangObjectNull = (viewModel) != (null);
+        if (viewModelJavaLangObjectNull) {
+
+
+            viewModel.addNewUser();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
 

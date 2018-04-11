@@ -14,8 +14,6 @@ import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
 
 public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,UserViewModel,UserRouter> {
 
-   // UserActivity = ActivityUserBinding
-    //import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
 
    private static final String KET_USER_ID = "KET_USER_ID";
 

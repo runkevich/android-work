@@ -1,6 +1,8 @@
 package com.runkevich8.gmail.injection;
 
 
+import com.runkevich8.gmail.presentation.screens.hw.hw10.AddUserViewModel;
+import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityDescViewModel;
 import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel;
 import com.runkevich8.gmail.presentation.screens.user.UserViewModel;
 import com.runkevich8.gmail.presentation.screens.usermvp.SingUserPresenter;
@@ -19,6 +21,9 @@ public interface AppComponent {
 
     void inject(SingUserPresenter singUserPresenter);
 
+    void inject(UserEntityDescViewModel userEntityDescViewModel);
+
+    void inject (AddUserViewModel addUserViewModel);
 
 //
 //    void inject(AddUserViewModel addNewUser);

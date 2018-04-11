@@ -20,6 +20,12 @@ class DataBinderMapper  {
                     return com.runkevich8.gmail.test.databinding.ActivityHw1Binding.bind(view, bindingComponent);
                 case com.runkevich8.gmail.test.R.layout.activity_classwork8:
                     return com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding.bind(view, bindingComponent);
+                case com.runkevich8.gmail.test.R.layout.activity_hw10_1:
+                    return com.runkevich8.gmail.test.databinding.ActivityHw101Binding.bind(view, bindingComponent);
+                case com.runkevich8.gmail.test.R.layout.activity_hw10_2:
+                    return com.runkevich8.gmail.test.databinding.ActivityHw102Binding.bind(view, bindingComponent);
+                case com.runkevich8.gmail.test.R.layout.activity_user_cl:
+                    return com.runkevich8.gmail.test.databinding.ActivityUserClBinding.bind(view, bindingComponent);
                 case com.runkevich8.gmail.test.R.layout.homework_main:
                     return com.runkevich8.gmail.test.databinding.HomeworkMainBinding.bind(view, bindingComponent);
         }
@@ -69,6 +75,24 @@ class DataBinderMapper  {
             case -776930613: {
                 if(tag.equals("layout/activity_classwork8_0")) {
                     return com.runkevich8.gmail.test.R.layout.activity_classwork8;
+                }
+                break;
+            }
+            case -234578212: {
+                if(tag.equals("layout/activity_hw10_1_0")) {
+                    return com.runkevich8.gmail.test.R.layout.activity_hw10_1;
+                }
+                break;
+            }
+            case -234577251: {
+                if(tag.equals("layout/activity_hw10_2_0")) {
+                    return com.runkevich8.gmail.test.R.layout.activity_hw10_2;
+                }
+                break;
+            }
+            case 1711210403: {
+                if(tag.equals("layout/activity_user_cl_0")) {
+                    return com.runkevich8.gmail.test.R.layout.activity_user_cl;
                 }
                 break;
             }

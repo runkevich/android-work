@@ -44,6 +44,10 @@ public abstract class BaseViewModel<R extends Router> extends ViewModel{
 
     }
 
+    public void onDestroy(){
+
+    }
+
     @Override
     protected void onCleared() {
         super.onCleared();

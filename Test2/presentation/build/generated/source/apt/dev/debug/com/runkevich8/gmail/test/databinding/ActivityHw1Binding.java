@@ -31,7 +31,7 @@ public class ActivityHw1Binding extends android.databinding.ViewDataBinding impl
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
+    private final android.view.View.OnClickListener mCallback4;
     @Nullable
     private final android.view.View.OnClickListener mCallback3;
     // values
@@ -51,9 +51,9 @@ public class ActivityHw1Binding extends android.databinding.ViewDataBinding impl
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new android.databinding.generated.callback.OnClickListener(this, 2);
-        mCallback1 = new android.databinding.generated.callback.OnClickListener(this, 1);
-        mCallback3 = new android.databinding.generated.callback.OnClickListener(this, 3);
+        mCallback2 = new android.databinding.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new android.databinding.generated.callback.OnClickListener(this, 3);
+        mCallback3 = new android.databinding.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -178,9 +178,9 @@ public class ActivityHw1Binding extends android.databinding.ViewDataBinding impl
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback1);
-            this.mboundView2.setOnClickListener(mCallback2);
-            this.mboundView3.setOnClickListener(mCallback3);
+            this.mboundView1.setOnClickListener(mCallback2);
+            this.mboundView2.setOnClickListener(mCallback3);
+            this.mboundView3.setOnClickListener(mCallback4);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
@@ -197,23 +197,6 @@ public class ActivityHw1Binding extends android.databinding.ViewDataBinding impl
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.swapText();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewModel
@@ -232,6 +215,23 @@ public class ActivityHw1Binding extends android.databinding.ViewDataBinding impl
                 break;
             }
             case 3: {
+                // localize variables for thread safety
+                // viewModel
+                com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.swapText();
+                }
+                break;
+            }
+            case 2: {
                 // localize variables for thread safety
                 // viewModel
                 com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextModel viewModel = mViewModel;

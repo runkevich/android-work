@@ -7,14 +7,23 @@ import com.gmail.runkevich8.data.net.ErrorTransformers_Factory;
 import com.gmail.runkevich8.data.net.RestApi;
 import com.gmail.runkevich8.data.net.RestService;
 import com.gmail.runkevich8.domain.executor.PostExecutionThread;
+import com.gmail.runkevich8.domain.interactor.AddNewUserUseCase;
 import com.gmail.runkevich8.domain.interactor.GetUserByIdUseCase;
 import com.gmail.runkevich8.domain.interactor.GetUserListUseCase;
+import com.gmail.runkevich8.domain.interactor.RemoveUserUseCase;
+import com.gmail.runkevich8.domain.interactor.SaveUserUseCase;
 import com.gmail.runkevich8.domain.repository.UserRepository;
 import com.google.gson.Gson;
+import com.runkevich8.gmail.presentation.screens.hw.hw10.AddUserViewModel;
+import com.runkevich8.gmail.presentation.screens.hw.hw10.AddUserViewModel_MembersInjector;
+import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityDescViewModel;
+import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityDescViewModel_MembersInjector;
 import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel;
 import com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel_MembersInjector;
 import com.runkevich8.gmail.presentation.screens.user.UserViewModel;
 import com.runkevich8.gmail.presentation.screens.user.UserViewModel_MembersInjector;
+import com.runkevich8.gmail.presentation.screens.usermvp.SingUserPresenter;
+import com.runkevich8.gmail.presentation.screens.usermvp.SingUserPresenter_MembersInjector;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
 import javax.annotation.Generated;
@@ -63,6 +72,18 @@ public final class DaggerAppComponent implements AppComponent {
     return new GetUserListUseCase(getUiThreadProvider.get(), getUserRepositoryProvider.get());
   }
 
+  private SaveUserUseCase getSaveUserUseCase() {
+    return new SaveUserUseCase(getUiThreadProvider.get(), getUserRepositoryProvider.get());
+  }
+
+  private RemoveUserUseCase getRemoveUserUseCase() {
+    return new RemoveUserUseCase(getUiThreadProvider.get(), getUserRepositoryProvider.get());
+  }
+
+  private AddNewUserUseCase getAddNewUserUseCase() {
+    return new AddNewUserUseCase(getUiThreadProvider.get(), getUserRepositoryProvider.get());
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final Builder builder) {
     this.getUiThreadProvider =
@@ -104,6 +125,21 @@ public final class DaggerAppComponent implements AppComponent {
     injectUserEntityViewModel(userEntityViewModel);
   }
 
+  @Override
+  public void inject(SingUserPresenter singUserPresenter) {
+    injectSingUserPresenter(singUserPresenter);
+  }
+
+  @Override
+  public void inject(UserEntityDescViewModel userEntityDescViewModel) {
+    injectUserEntityDescViewModel(userEntityDescViewModel);
+  }
+
+  @Override
+  public void inject(AddUserViewModel addUserViewModel) {
+    injectAddUserViewModel(addUserViewModel);
+  }
+
   private UserViewModel injectUserViewModel(UserViewModel instance) {
     UserViewModel_MembersInjector.injectGetUserByIdUseCase(instance, getGetUserByIdUseCase());
     return instance;
@@ -112,6 +148,25 @@ public final class DaggerAppComponent implements AppComponent {
   private UserEntityViewModel injectUserEntityViewModel(UserEntityViewModel instance) {
     UserEntityViewModel_MembersInjector.injectProfileListUseCase(instance, getGetUserListUseCase());
     UserEntityViewModel_MembersInjector.injectContext(instance, getContextProvider.get());
+    return instance;
+  }
+
+  private SingUserPresenter injectSingUserPresenter(SingUserPresenter instance) {
+    SingUserPresenter_MembersInjector.injectGetUserByIdUseCase(instance, getGetUserByIdUseCase());
+    return instance;
+  }
+
+  private UserEntityDescViewModel injectUserEntityDescViewModel(UserEntityDescViewModel instance) {
+    UserEntityDescViewModel_MembersInjector.injectContext(instance, getContextProvider.get());
+    UserEntityDescViewModel_MembersInjector.injectUserById(instance, getGetUserByIdUseCase());
+    UserEntityDescViewModel_MembersInjector.injectSaveUser(instance, getSaveUserUseCase());
+    UserEntityDescViewModel_MembersInjector.injectRemove(instance, getRemoveUserUseCase());
+    return instance;
+  }
+
+  private AddUserViewModel injectAddUserViewModel(AddUserViewModel instance) {
+    AddUserViewModel_MembersInjector.injectAddUser(instance, getAddNewUserUseCase());
+    AddUserViewModel_MembersInjector.injectContext(instance, getContextProvider.get());
     return instance;
   }
 

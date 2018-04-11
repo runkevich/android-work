@@ -15,7 +15,10 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.recyclePR, 3);
+        sViewsWithIds.put(R.id.cw8_username, 1);
+        sViewsWithIds.put(R.id.cw8_age, 2);
+        sViewsWithIds.put(R.id.progressBar, 3);
+        sViewsWithIds.put(R.id.recyclePR, 4);
     }
     // views
     @NonNull
@@ -23,7 +26,9 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     @NonNull
     public final android.widget.TextView cw8Username;
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    public final android.widget.RelativeLayout linearLayout;
+    @NonNull
+    public final android.widget.ProgressBar progressBar;
     @NonNull
     public final android.support.v7.widget.RecyclerView recyclePR;
     // variables
@@ -34,15 +39,14 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     // Inverse Binding Event Handlers
 
     public ActivityClasswork8Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        super(bindingComponent, root, 3);
-        final Object[] bindings = mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds);
+        super(bindingComponent, root, 0);
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
         this.cw8Age = (android.widget.TextView) bindings[2];
-        this.cw8Age.setTag(null);
         this.cw8Username = (android.widget.TextView) bindings[1];
-        this.cw8Username.setTag(null);
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
-        this.mboundView0.setTag(null);
-        this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[3];
+        this.linearLayout = (android.widget.RelativeLayout) bindings[0];
+        this.linearLayout.setTag(null);
+        this.progressBar = (android.widget.ProgressBar) bindings[3];
+        this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[4];
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -51,7 +55,7 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x10L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -80,11 +84,6 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
 
     public void setViewModel(@Nullable com.runkevich8.gmail.presentation.screens.user.UserViewModel ViewModel) {
         this.mViewModel = ViewModel;
-        synchronized(this) {
-            mDirtyFlags |= 0x8L;
-        }
-        notifyPropertyChanged(BR.viewModel);
-        super.requestRebind();
     }
     @Nullable
     public com.runkevich8.gmail.presentation.screens.user.UserViewModel getViewModel() {
@@ -94,39 +93,6 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
-            case 0 :
-                return onChangeViewModelGender((android.databinding.ObservableBoolean) object, fieldId);
-            case 1 :
-                return onChangeViewModelAge((android.databinding.ObservableInt) object, fieldId);
-            case 2 :
-                return onChangeViewModelUsername((android.databinding.ObservableField<java.lang.String>) object, fieldId);
-        }
-        return false;
-    }
-    private boolean onChangeViewModelGender(android.databinding.ObservableBoolean ViewModelGender, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x1L;
-            }
-            return true;
-        }
-        return false;
-    }
-    private boolean onChangeViewModelAge(android.databinding.ObservableInt ViewModelAge, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
-            }
-            return true;
-        }
-        return false;
-    }
-    private boolean onChangeViewModelUsername(android.databinding.ObservableField<java.lang.String> ViewModelUsername, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x4L;
-            }
-            return true;
         }
         return false;
     }
@@ -138,100 +104,7 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        android.databinding.ObservableBoolean viewModelGender = null;
-        android.databinding.ObservableInt viewModelAge = null;
-        java.lang.String stringValueOfViewModelAge = null;
-        android.databinding.ObservableField<java.lang.String> viewModelUsername = null;
-        boolean viewModelGenderGet = false;
-        int viewModelAgeGet = 0;
-        int viewModelGenderCw8AgeAndroidColorColorAccentCw8AgeAndroidColorColorPrimary = 0;
-        int viewModelGenderCw8UsernameAndroidColorColorAccentCw8UsernameAndroidColorColorPrimary = 0;
-        java.lang.String viewModelUsernameGet = null;
-        com.runkevich8.gmail.presentation.screens.user.UserViewModel viewModel = mViewModel;
-
-        if ((dirtyFlags & 0x1fL) != 0) {
-
-
-            if ((dirtyFlags & 0x19L) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.gender
-                        viewModelGender = viewModel.gender;
-                    }
-                    updateRegistration(0, viewModelGender);
-
-
-                    if (viewModelGender != null) {
-                        // read viewModel.gender.get()
-                        viewModelGenderGet = viewModelGender.get();
-                    }
-                if((dirtyFlags & 0x19L) != 0) {
-                    if(viewModelGenderGet) {
-                            dirtyFlags |= 0x40L;
-                            dirtyFlags |= 0x100L;
-                    }
-                    else {
-                            dirtyFlags |= 0x20L;
-                            dirtyFlags |= 0x80L;
-                    }
-                }
-
-
-                    // read viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
-                    viewModelGenderCw8AgeAndroidColorColorAccentCw8AgeAndroidColorColorPrimary = ((viewModelGenderGet) ? (getColorFromResource(cw8Age, R.color.colorAccent)) : (getColorFromResource(cw8Age, R.color.colorPrimary)));
-                    // read viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
-                    viewModelGenderCw8UsernameAndroidColorColorAccentCw8UsernameAndroidColorColorPrimary = ((viewModelGenderGet) ? (getColorFromResource(cw8Username, R.color.colorAccent)) : (getColorFromResource(cw8Username, R.color.colorPrimary)));
-            }
-            if ((dirtyFlags & 0x1aL) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.age
-                        viewModelAge = viewModel.age;
-                    }
-                    updateRegistration(1, viewModelAge);
-
-
-                    if (viewModelAge != null) {
-                        // read viewModel.age.get()
-                        viewModelAgeGet = viewModelAge.get();
-                    }
-
-
-                    // read String.valueOf(viewModel.age.get())
-                    stringValueOfViewModelAge = java.lang.String.valueOf(viewModelAgeGet);
-            }
-            if ((dirtyFlags & 0x1cL) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.username
-                        viewModelUsername = viewModel.username;
-                    }
-                    updateRegistration(2, viewModelUsername);
-
-
-                    if (viewModelUsername != null) {
-                        // read viewModel.username.get()
-                        viewModelUsernameGet = viewModelUsername.get();
-                    }
-            }
-        }
         // batch finished
-        if ((dirtyFlags & 0x19L) != 0) {
-            // api target 1
-
-            this.cw8Age.setTextColor(viewModelGenderCw8AgeAndroidColorColorAccentCw8AgeAndroidColorColorPrimary);
-            this.cw8Username.setTextColor(viewModelGenderCw8UsernameAndroidColorColorAccentCw8UsernameAndroidColorColorPrimary);
-        }
-        if ((dirtyFlags & 0x1aL) != 0) {
-            // api target 1
-
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.cw8Age, stringValueOfViewModelAge);
-        }
-        if ((dirtyFlags & 0x1cL) != 0) {
-            // api target 1
-
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.cw8Username, viewModelUsernameGet);
-        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -266,15 +139,8 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
         return new ActivityClasswork8Binding(bindingComponent, view);
     }
     /* flag mapping
-        flag 0 (0x1L): viewModel.gender
-        flag 1 (0x2L): viewModel.age
-        flag 2 (0x3L): viewModel.username
-        flag 3 (0x4L): viewModel
-        flag 4 (0x5L): null
-        flag 5 (0x6L): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
-        flag 6 (0x7L): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
-        flag 7 (0x8L): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
-        flag 8 (0x9L): viewModel.gender.get() ? @android:color/colorAccent : @android:color/colorPrimary
+        flag 0 (0x1L): viewModel
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }

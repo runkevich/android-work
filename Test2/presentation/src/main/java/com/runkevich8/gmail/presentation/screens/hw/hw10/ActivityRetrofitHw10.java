@@ -52,6 +52,6 @@ public class ActivityRetrofitHw10 extends BaseMvvmActivity<ActivityHw10Binding, 
     @Override
     public void onClick(String id) {
         ActivityRetrofitHw10.id = id;
-        startActivity(new Intent(this, ActivityRetrofitHw10.class));
+        startActivity(new Intent(this, ActivityRetrofitHw10_1.class));
     }
 }

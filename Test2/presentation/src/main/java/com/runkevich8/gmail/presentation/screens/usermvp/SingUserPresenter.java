@@ -65,13 +65,15 @@ public class SingUserPresenter extends UserPresenter {
     }
 
 
+    @Override
+    public UserAdapter getUserAdapter() {
+        return null;
+    }
 
     public void onUserClick(){
         //здесь все делается то анимация,то цвето
         // поменять,сюда клики перекидываем
     }
 
-    public void getUserAdapter(){
 
-    }
 }

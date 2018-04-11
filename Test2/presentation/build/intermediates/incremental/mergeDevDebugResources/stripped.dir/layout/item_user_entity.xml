@@ -24,24 +24,24 @@
             android:textSize="14sp"
             tools:text="Full Name" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="@{String.valueOf(userProfile.age)}"-->
+            <!--tools:text="Age: 20"-->
+            <!--android:id="@+id/textView2" />-->
 
-            tools:text="Age: 20"
-            android:id="@+id/textView2" />
 
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView2"
-            android:tag="binding_2"               
-            tools:text="Gender: male" />
+        <!--<TextView-->
+            <!--android:id="@+id/textView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_below="@+id/textView2"-->
+            <!--android:text='@{userProfile.fullName}'-->
+            <!--tools:text="Gender: male" />-->
 
         <TextView
             android:id="@+id/idUser"
@@ -50,7 +50,6 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="14dp"
             android:layout_toEndOf="@+id/textView"
-
             android:visibility="invisible" />
     </RelativeLayout>
          
