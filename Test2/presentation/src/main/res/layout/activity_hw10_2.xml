@@ -10,16 +10,29 @@
 <RelativeLayout
 android:layout_width="match_parent"
 android:layout_height="match_parent">
-
+    <Button
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:onClick="@{()->viewModel.addNewUser()}"
+        android:text="save"
+        android:background="@drawable/button_selector"/>
 <EditText
     android:id="@+id/editText"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:hint="Full name"
+    android:drawableLeft="@drawable/ic_cloud_black_24dp"
+    android:drawablePadding="5dp"
+    android:layout_below="@id/b"
     android:text="@={viewModel.fullName}"/>
 
 <EditText
     android:id="@+id/editText3"
+    android:drawableLeft="@drawable/ic_timelapse_black_24dp"
+    android:drawablePadding="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentStart="true"
@@ -28,14 +41,7 @@ android:layout_height="match_parent">
     android:inputType="number"
     android:text="@={viewModel.convertFromInt(viewModel.age)}"/>
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/editText3"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="37dp"
-    android:onClick="@{()->viewModel.addNewUser()}"
-    android:text="save" />
+
 
 </RelativeLayout>
     </layout>

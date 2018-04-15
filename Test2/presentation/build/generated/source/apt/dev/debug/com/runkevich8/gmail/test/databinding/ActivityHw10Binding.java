@@ -16,14 +16,17 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding imp
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.layou_rv, 3);
+        sViewsWithIds.put(R.id.layout_second, 4);
     }
     // views
     @NonNull
+    public final android.widget.Button buttonFirst;
+    @NonNull
     public final android.widget.LinearLayout layouRv;
     @NonNull
-    private final android.widget.RelativeLayout mboundView0;
+    public final android.widget.RelativeLayout layoutParent;
     @NonNull
-    private final android.widget.Button mboundView2;
+    public final android.widget.LinearLayout layoutSecond;
     @NonNull
     public final android.support.v7.widget.RecyclerView recyclePR;
     // variables
@@ -37,13 +40,14 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding imp
 
     public ActivityHw10Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 1);
-        final Object[] bindings = mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        this.buttonFirst = (android.widget.Button) bindings[1];
+        this.buttonFirst.setTag(null);
         this.layouRv = (android.widget.LinearLayout) bindings[3];
-        this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
-        this.mboundView0.setTag(null);
-        this.mboundView2 = (android.widget.Button) bindings[2];
-        this.mboundView2.setTag(null);
-        this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[1];
+        this.layoutParent = (android.widget.RelativeLayout) bindings[0];
+        this.layoutParent.setTag(null);
+        this.layoutSecond = (android.widget.LinearLayout) bindings[4];
+        this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[2];
         this.recyclePR.setTag(null);
         setRootTag(root);
         // listeners
@@ -143,7 +147,7 @@ public class ActivityHw10Binding extends android.databinding.ViewDataBinding imp
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback1);
+            this.buttonFirst.setOnClickListener(mCallback1);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

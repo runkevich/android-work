@@ -10,11 +10,14 @@ import com.gmail.runkevich8.data.net.RestService;
 import com.gmail.runkevich8.domain.entity.UserEntity;
 import com.gmail.runkevich8.domain.repository.UserRepository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.Completable;
 import io.reactivex.Observable;
+import io.reactivex.ObservableSource;
+import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 public class UserRepositoryImpl implements UserRepository{
@@ -29,7 +32,7 @@ public class UserRepositoryImpl implements UserRepository{
     }
 
     @Override
-    public Observable<UserEntity> get(String id) {
+    public Observable<UserEntity> get(final String id) {
 
 //
 //        return   Observable.create(new ObservableOnSubscribe<User>() {
@@ -46,6 +49,24 @@ public class UserRepositoryImpl implements UserRepository{
 //        });
         return restService
                 .loadUserById(id)
+                .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends User>>() {
+                    @Override
+                    public ObservableSource<? extends User> apply(Throwable throwable) throws Exception {
+                        if (throwable instanceof IOException) {
+                            return userDatabase
+                                    .getById(id)
+                                    .toObservable()
+                                    .map(new Function<List<User>, User>() {
+                                        @Override
+                                        public User apply(List<User> users) throws Exception {
+                                            return users.get(0);
+                                        }
+                                    });
+                        } else {
+                            throw (Exception) throwable;
+                        }
+                    }
+                })
                 .map(new Function<User, UserEntity>() {
                     @Override
                     public UserEntity apply(User user) throws Exception {
@@ -65,6 +86,27 @@ public class UserRepositoryImpl implements UserRepository{
        // return Observable.just(new ArrayList<User>());
         return  restService
                 .loadUsers()
+
+                .doOnNext(new Consumer<List<User>>() {
+                    @Override
+                    public void accept(List<User> users) throws Exception {
+                        userDatabase.deleteAll();
+                        userDatabase.insert(users);
+                    }
+                })
+
+                .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends List<User>>>() {
+                    @Override
+                    public ObservableSource<? extends List<User>> apply(Throwable throwable) throws Exception {
+                        if (throwable instanceof IOException) {
+                            return userDatabase
+                                    .getAll().toObservable().take(1);
+                        } else {
+                            throw (Exception) throwable;
+                        }
+
+                    }
+                })
                 .map(new Function<List<User>, List<UserEntity>>() {
                     @Override
                     public List<UserEntity> apply(List<User> userEntities) throws Exception {

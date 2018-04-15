@@ -6,16 +6,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
+import com.gmail.runkevich8.data.sharedprefs.AppSharedPrefs;
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.presentation.screens.user.list.UserRouter;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
 
+import javax.inject.Inject;
+
 public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,UserViewModel,UserRouter> {
 
 
    private static final String KET_USER_ID = "KET_USER_ID";
+
+   @Inject
+   public AppSharedPrefs appSharedPrefs;
 
     public static void show(Activity activity, String id) {
         Intent intent = new Intent(activity, UserActivity.class);
@@ -30,7 +40,6 @@ public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,Use
     @Override
     public UserViewModel provideViewModel() {
         return ViewModelProviders.of(this).get(UserViewModel.class);
-      //  return new UserViewModel();
     }
 
     @Override
@@ -46,10 +55,40 @@ public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,Use
         binding.recyclePR.setHasFixedSize(true);
         binding.recyclePR.setAdapter(viewModel.userAdapter);
 
+        Toolbar toolbar = binding.toolbar;
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
+        toolbar.setNavigationIcon(R.drawable.ic_cloud_black_24dp);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.option_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.actionSearch :{
+
+                break;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
+    //
 }
 
 

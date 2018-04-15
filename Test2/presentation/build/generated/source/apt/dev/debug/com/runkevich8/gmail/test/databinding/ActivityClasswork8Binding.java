@@ -15,22 +15,31 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.cw8_username, 1);
-        sViewsWithIds.put(R.id.cw8_age, 2);
-        sViewsWithIds.put(R.id.progressBar, 3);
-        sViewsWithIds.put(R.id.recyclePR, 4);
+        sViewsWithIds.put(R.id.appBarLayout, 1);
+        sViewsWithIds.put(R.id.toolbar, 2);
+        sViewsWithIds.put(R.id.title_toolbar, 3);
+        sViewsWithIds.put(R.id.cw8_username, 4);
+        sViewsWithIds.put(R.id.cw8_age, 5);
+        sViewsWithIds.put(R.id.progressBar, 6);
+        sViewsWithIds.put(R.id.recyclePR, 7);
     }
     // views
+    @NonNull
+    public final android.support.design.widget.AppBarLayout appBarLayout;
     @NonNull
     public final android.widget.TextView cw8Age;
     @NonNull
     public final android.widget.TextView cw8Username;
     @NonNull
-    public final android.widget.RelativeLayout linearLayout;
+    public final android.widget.LinearLayout linearLayout;
     @NonNull
     public final android.widget.ProgressBar progressBar;
     @NonNull
     public final android.support.v7.widget.RecyclerView recyclePR;
+    @NonNull
+    public final android.widget.TextView titleToolbar;
+    @NonNull
+    public final android.support.v7.widget.Toolbar toolbar;
     // variables
     @Nullable
     private com.runkevich8.gmail.presentation.screens.user.UserViewModel mViewModel;
@@ -40,13 +49,16 @@ public class ActivityClasswork8Binding extends android.databinding.ViewDataBindi
 
     public ActivityClasswork8Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
-        this.cw8Age = (android.widget.TextView) bindings[2];
-        this.cw8Username = (android.widget.TextView) bindings[1];
-        this.linearLayout = (android.widget.RelativeLayout) bindings[0];
+        final Object[] bindings = mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds);
+        this.appBarLayout = (android.support.design.widget.AppBarLayout) bindings[1];
+        this.cw8Age = (android.widget.TextView) bindings[5];
+        this.cw8Username = (android.widget.TextView) bindings[4];
+        this.linearLayout = (android.widget.LinearLayout) bindings[0];
         this.linearLayout.setTag(null);
-        this.progressBar = (android.widget.ProgressBar) bindings[3];
-        this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[4];
+        this.progressBar = (android.widget.ProgressBar) bindings[6];
+        this.recyclePR = (android.support.v7.widget.RecyclerView) bindings[7];
+        this.titleToolbar = (android.widget.TextView) bindings[3];
+        this.toolbar = (android.support.v7.widget.Toolbar) bindings[2];
         setRootTag(root);
         // listeners
         invalidateAll();

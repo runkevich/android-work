@@ -2,7 +2,6 @@ package com.gmail.runkevich8.data.net;
 
 
 import com.gmail.runkevich8.data.entity.Data;
-import com.gmail.runkevich8.data.entity.Error;
 import com.gmail.runkevich8.data.entity.Image;
 import com.gmail.runkevich8.data.entity.User;
 
@@ -29,10 +28,9 @@ public class RestService {
 
     public Observable<List<User>> loadUsers() {
         return restApi
-                .loadUsers()
-                .compose(errorTransformers.<List<User>, Error>parseHttpError());
+                .loadUsers();
+                //.compose(errorTransformers.<List<User>, Error>parseHttpError());
     }
-
 
 
 

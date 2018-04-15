@@ -18,13 +18,13 @@ public class ActivityHw102Binding extends android.databinding.ViewDataBinding im
     }
     // views
     @NonNull
+    public final android.widget.Button b;
+    @NonNull
     public final android.widget.EditText editText;
     @NonNull
     public final android.widget.EditText editText3;
     @NonNull
     private final android.widget.RelativeLayout mboundView0;
-    @NonNull
-    private final android.widget.Button mboundView3;
     // variables
     @Nullable
     private com.runkevich8.gmail.presentation.screens.hw.hw10.AddUserViewModel mViewModel;
@@ -122,14 +122,14 @@ public class ActivityHw102Binding extends android.databinding.ViewDataBinding im
     public ActivityHw102Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 2);
         final Object[] bindings = mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds);
-        this.editText = (android.widget.EditText) bindings[1];
+        this.b = (android.widget.Button) bindings[1];
+        this.b.setTag(null);
+        this.editText = (android.widget.EditText) bindings[2];
         this.editText.setTag(null);
-        this.editText3 = (android.widget.EditText) bindings[2];
+        this.editText3 = (android.widget.EditText) bindings[3];
         this.editText3.setTag(null);
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView3 = (android.widget.Button) bindings[3];
-        this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
         mCallback8 = new android.databinding.generated.callback.OnClickListener(this, 1);
@@ -261,17 +261,17 @@ public class ActivityHw102Binding extends android.databinding.ViewDataBinding im
             }
         }
         // batch finished
+        if ((dirtyFlags & 0x8L) != 0) {
+            // api target 1
+
+            this.b.setOnClickListener(mCallback8);
+            android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.editText, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, editTextandroidTextAttrChanged);
+            android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.editText3, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, editText3androidTextAttrChanged);
+        }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
             android.databinding.adapters.TextViewBindingAdapter.setText(this.editText, viewModelFullNameGet);
-        }
-        if ((dirtyFlags & 0x8L) != 0) {
-            // api target 1
-
-            android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.editText, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, editTextandroidTextAttrChanged);
-            android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.editText3, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, editText3androidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback8);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1

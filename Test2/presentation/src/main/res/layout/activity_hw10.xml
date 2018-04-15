@@ -8,13 +8,33 @@
             type="com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel" />
     </data>
     <RelativeLayout
+        android:id="@+id/layout_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/layou_rv">
+            android:id="@+id/layou_rv"
+
+            android:gravity="center"
+            android:padding="10dp">
+            <Button
+                android:id="@+id/button_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:onClick="@{()->viewModel.addNewUser()}"
+                android:text="Новый пользователь"
+                android:background="@drawable/button_selector"
+                android:gravity="bottom" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layou_rv"
+            android:id="@+id/layout_second"
+            >
 
             <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclePR"
@@ -24,22 +44,5 @@
                 android:padding="20dp"
             />
         </LinearLayout>
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/layou_rv"
-           android:gravity="center"
-           android:padding="10dp">
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:padding="20dp"
-               android:textAlignment="center"
-               android:onClick="@{()->viewModel.addNewUser()}"
-               android:text="Новый пользователь"
-               android:background="@drawable/button_selector"
-               android:gravity="bottom"/>
-       </LinearLayout>
-
     </RelativeLayout>
 </layout>

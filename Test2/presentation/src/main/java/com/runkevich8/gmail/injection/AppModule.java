@@ -33,6 +33,7 @@ public class AppModule {
     //Модуль - это класс, который предоставляет реализацию зависимостей
 
     Context context;
+    public static final String DATA_BASE_NAME = "database";
 
     public AppModule(Context context) {
         this.context = context;
@@ -136,6 +137,8 @@ public class AppModule {
         return retrofit.create(RestApi.class);
     }
 //_________________________________________________
+
+
     @Provides
     @Singleton
     public Gson getGson(){

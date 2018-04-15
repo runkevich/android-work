@@ -15,7 +15,8 @@ public class ActivityHw101Binding extends android.databinding.ViewDataBinding im
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.textView4, 8);
+        sViewsWithIds.put(R.id.ll, 8);
+        sViewsWithIds.put(R.id.textView4, 9);
     }
     // views
     @NonNull
@@ -25,11 +26,13 @@ public class ActivityHw101Binding extends android.databinding.ViewDataBinding im
     @NonNull
     public final android.widget.EditText editText2;
     @NonNull
+    public final android.widget.LinearLayout ll;
+    @NonNull
     private final android.widget.RelativeLayout mboundView0;
     @NonNull
-    private final android.widget.EditText mboundView2;
+    private final android.widget.Button mboundView3;
     @NonNull
-    private final android.widget.Button mboundView7;
+    private final android.widget.EditText mboundView5;
     @NonNull
     public final android.widget.TextView textView3;
     @NonNull
@@ -96,12 +99,12 @@ public class ActivityHw101Binding extends android.databinding.ViewDataBinding im
             }
         }
     };
-    private android.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new android.databinding.InverseBindingListener() {
+    private android.databinding.InverseBindingListener mboundView5androidTextAttrChanged = new android.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewModel.fullName.get()
             //         is viewModel.fullName.set((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
+            java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView5);
             // localize variables for thread safety
             // viewModel.fullName != null
             boolean viewModelFullNameJavaLangObjectNull = false;
@@ -136,23 +139,24 @@ public class ActivityHw101Binding extends android.databinding.ViewDataBinding im
 
     public ActivityHw101Binding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 3);
-        final Object[] bindings = mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds);
-        this.button = (android.widget.Button) bindings[5];
+        final Object[] bindings = mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds);
+        this.button = (android.widget.Button) bindings[1];
         this.button.setTag(null);
-        this.button2 = (android.widget.Button) bindings[6];
+        this.button2 = (android.widget.Button) bindings[2];
         this.button2.setTag(null);
-        this.editText2 = (android.widget.EditText) bindings[4];
+        this.editText2 = (android.widget.EditText) bindings[7];
         this.editText2.setTag(null);
+        this.ll = (android.widget.LinearLayout) bindings[8];
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (android.widget.EditText) bindings[2];
-        this.mboundView2.setTag(null);
-        this.mboundView7 = (android.widget.Button) bindings[7];
-        this.mboundView7.setTag(null);
-        this.textView3 = (android.widget.TextView) bindings[1];
+        this.mboundView3 = (android.widget.Button) bindings[3];
+        this.mboundView3.setTag(null);
+        this.mboundView5 = (android.widget.EditText) bindings[5];
+        this.mboundView5.setTag(null);
+        this.textView3 = (android.widget.TextView) bindings[4];
         this.textView3.setTag(null);
-        this.textView4 = (android.widget.TextView) bindings[8];
-        this.textView6 = (android.widget.TextView) bindings[3];
+        this.textView4 = (android.widget.TextView) bindings[9];
+        this.textView6 = (android.widget.TextView) bindings[6];
         this.textView6.setTag(null);
         setRootTag(root);
         // listeners
@@ -341,15 +345,15 @@ public class ActivityHw101Binding extends android.databinding.ViewDataBinding im
             this.button.setOnClickListener(mCallback5);
             this.button2.setOnClickListener(mCallback6);
             android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.editText2, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, editText2androidTextAttrChanged);
-            android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.mboundView7.setOnClickListener(mCallback7);
+            this.mboundView3.setOnClickListener(mCallback7);
+            android.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (android.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x19L) != 0) {
             // api target 1
 
             this.button2.setEnabled(viewModelIsVisibleViewGet);
             this.editText2.setVisibility(viewModelIsVisibleViewVVISIBLEVINVISIBLE);
-            this.mboundView2.setVisibility(viewModelIsVisibleViewVVISIBLEVINVISIBLE);
+            this.mboundView5.setVisibility(viewModelIsVisibleViewVVISIBLEVINVISIBLE);
             this.textView3.setVisibility(viewModelIsVisibleViewVINVISIBLEVVISIBLE);
             this.textView6.setVisibility(viewModelIsVisibleViewVINVISIBLEVVISIBLE);
         }
@@ -362,7 +366,7 @@ public class ActivityHw101Binding extends android.databinding.ViewDataBinding im
         if ((dirtyFlags & 0x1cL) != 0) {
             // api target 1
 
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewModelFullNameGet);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewModelFullNameGet);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.textView3, viewModelFullNameGet);
         }
     }

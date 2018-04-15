@@ -8,19 +8,52 @@
             name="viewModel"
             type="com.runkevich8.gmail.presentation.screens.user.UserViewModel" />
     </data>
-    <RelativeLayout
+    <LinearLayout
         xmlns:bind="http://schemas.android.com/tools"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical">
+
+        <!--NestedScrollView - вместо скролвью-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/title_toolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:text="Title toolbar"
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                  </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
 
         <TextView
             android:id="@+id/cw8_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:textSize="24sp"
             bind:layout_conversion_absoluteHeight="32dp"
             bind:layout_conversion_absoluteWidth="1dp"
@@ -57,6 +90,6 @@
         bind:layout_conversion_absoluteWidth="384dp"
         bind:layout_editor_absoluteX="172dp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </layout>

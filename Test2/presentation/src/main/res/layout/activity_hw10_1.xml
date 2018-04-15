@@ -14,14 +14,49 @@
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll"
+            android:gravity="center"
+            android:padding="10dp">
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText2"
+                android:layout_marginRight="5dp"
+                android:onClick="@{()->viewModel.edit()}"
+                android:text="Edit"
+                android:background="@drawable/button_selector"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled='@{viewModel.isVisibleView}'
+                android:onClick="@{()->viewModel.save()}"
+                android:text="Save"
+                android:layout_marginRight="5dp"
+                android:id="@+id/button2"
+                android:background="@drawable/button_selector"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.remove()}"
+                android:text="remove"
+                android:padding="5dp"
+                android:background="@drawable/button_selector"/>
+        </LinearLayout>
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.fullName}"
             android:textSize="15sp"
+            android:layout_below="@id/ll"
             android:visibility='@{(viewModel.isVisibleView ? V.INVISIBLE : V.VISIBLE)}'
             tools:text="asdfdsafsdafas" />
 
@@ -30,6 +65,7 @@
             android:layout_height="wrap_content"
             android:text="@={viewModel.fullName}"
             android:textSize="12sp"
+            android:layout_below="@id/ll"
             android:visibility='@{(viewModel.isVisibleView ? V.VISIBLE : V.INVISIBLE)}' />
 
         <TextView
@@ -74,39 +110,6 @@
             <!--android:layout_marginTop="53dp"-->
             <!--android:text='@{"Gender: " + (viewModel.gender ? "Male" : "Female")}'-->
             <!--android:textSize="15sp" />-->
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editText2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="36dp"
-            android:onClick="@{()->viewModel.edit()}"
-            android:text="Edit"
-            android:background="@drawable/button_selector"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/button"
-            android:layout_below="@+id/button"
-            android:layout_marginTop="12dp"
-            android:enabled='@{viewModel.isVisibleView}'
-            android:onClick="@{()->viewModel.save()}"
-            android:text="Save"
-            android:id="@+id/button2"
-            android:background="@drawable/button_selector"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/button2"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="17dp"
-            android:onClick="@{()->viewModel.remove()}"
-            android:text="remove"
-            android:background="@drawable/button_selector"/>
 
     </RelativeLayout>
 </layout>
