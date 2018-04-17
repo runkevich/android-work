@@ -103,12 +103,22 @@
             android:layout_margin="5dp"/>
 
         <Button
+            android:id="@+id/hw_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дз 11"
+            android:background="@drawable/button_selector"
+            android:layout_margin="5dp"/>
+
+        <Button
             android:id="@+id/hw_11_class"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="classwork"
             android:background="@drawable/button_selector"
             android:layout_margin="5dp"/>
+
+
     </LinearLayout>
 
 </ScrollView>

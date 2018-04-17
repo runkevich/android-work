@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.presentation.base.Router;
@@ -21,6 +22,7 @@ public class ActivityRetrofitHw10 extends BaseMvvmActivity<ActivityHw10Binding, 
     private RecyclerViewAdapter adaptRV;
     public static String id = "";
     public LinearLayout layoutTop, layoutBottom;
+    public RelativeLayout layoutParent;
 
 
     @Override
@@ -53,18 +55,27 @@ public class ActivityRetrofitHw10 extends BaseMvvmActivity<ActivityHw10Binding, 
 
 
 
-//
-//        layoutTop = (LinearLayout) binding.layoutSecond;
-//        layoutBottom = (LinearLayout) binding.layoutSecond;
+        layoutTop = (LinearLayout) binding.layouRv;
+        layoutBottom = (LinearLayout) binding.layoutSecond;
+        layoutParent = binding.layoutParent;
 
 //
 //        //layoutTop.setVisibility(View.GONE);
-//        layoutTop.bringToFront();
+       // layoutBottom.bringToFront();
 //       // layoutBottom.setBackgroundColor(Color.GRAY);
-//        layoutBottom.invalidate();
-//        layoutBottom.bringToFront();
+       /// layoutParent.invalidate();
+        //layoutBottom.invalidate();
+
+//        try {
+//            Thread.sleep(6000); //Приостанавливает поток на 1 секунду
+//        } catch (Exception e) {
+//
+//        }
+
+   //     layoutTop.bringToFront();
 //       // layoutTop.setBackgroundColor(Color.GRAY);
-//        layoutTop.invalidate();
+      //  layoutParent.invalidate();
+       // layoutTop.invalidate();
 
 
         //layoutTop.invalidate();

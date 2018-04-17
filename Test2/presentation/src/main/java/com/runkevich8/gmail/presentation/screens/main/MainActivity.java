@@ -12,6 +12,7 @@ import com.runkevich8.gmail.presentation.base.BaseViewModel;
 import com.runkevich8.gmail.presentation.base.Router;
 import com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextActivity;
 import com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10;
+import com.runkevich8.gmail.presentation.screens.hw.hw11.ActivityToFrontHw11;
 import com.runkevich8.gmail.presentation.screens.user.UserActivity;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.databinding.HomeworkMainBinding;
@@ -52,6 +53,7 @@ public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseView
         binding.hw8.setOnClickListener(this);
         binding.hw9.setOnClickListener(this);
         binding.hw10.setOnClickListener(this);
+        binding.hw11.setOnClickListener(this);
         binding.hw11Class.setOnClickListener(this);
 
     }
@@ -70,6 +72,10 @@ public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseView
                     break;
             case R.id.hw_11_class:
                 intent = new Intent(this, UserActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.hw_11:
+                intent = new Intent(this, ActivityToFrontHw11.class);
                 startActivity(intent);
                 break;
             default:

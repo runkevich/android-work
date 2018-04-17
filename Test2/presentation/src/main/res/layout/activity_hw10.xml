@@ -7,16 +7,19 @@
             name="viewModel"
             type="com.runkevich8.gmail.presentation.screens.hw.hw10.UserEntityViewModel" />
     </data>
+
     <RelativeLayout
         android:id="@+id/layout_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        android:clipChildren="false">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/layou_rv"
-
             android:gravity="center"
+            android:background="#868585"
             android:padding="10dp">
             <Button
                 android:id="@+id/button_first"
@@ -34,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/layou_rv"
             android:id="@+id/layout_second"
+            android:background="#868585"
             >
 
             <android.support.v7.widget.RecyclerView
