@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                   
+
+    
+
+                                           
+
+                                          
+                 
+                            
+                                                                                           
+
+           
+
+<LinearLayout
+
+
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/colorAccent"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:layout_marginBottom="20dp" android:tag="layout/item_user_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/textView1_cw6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_1"         
+        tools:text="Username" />
+
+    <TextView
+        android:id="@+id/textView2_cw6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:tag="binding_2"      />
+    <ImageView
+        android:id="@+id/image_cw6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sova_anmation_1" />
+</LinearLayout>
+         

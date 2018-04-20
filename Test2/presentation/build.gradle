@@ -11,11 +11,37 @@ android {
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "MY_CLOUD_API", '"https://api.backendless.com/DE34C51E-BB62-9A44-FFFE-BE72ACC3AB00/D7B2D441-A243-DFCB-FFE7-D81644A31200/"'
     }
+
+    signingConfigs{
+        debug{
+            storeFile file('../key/dev.jks')
+            storePassword '12345678'
+            keyAlias 'keyAlias'
+            keyPassword '12345678'
+        }
+
+        //        release { FIXME
+//            storeFile file(“”)
+//            storePassword “”
+//            keyAlias “”
+//            keyPassword “”
+//        }
+    }
+
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
         release {
+            signingConfig signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
@@ -23,13 +49,13 @@ android {
     }
 
     flavorDimensions "typeVersion"
-    productFlavors{
-        dev{
+    productFlavors {
+        dev {
             dimension "typeVersion"
             buildConfigField "String", "API_URL", "\"http://test\""
         }
 
-        live{
+        live {
             dimension "typeVersion"
             buildConfigField "String", "API_URL", "\"http://live\""
         }
@@ -38,7 +64,7 @@ android {
 
 
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
     compileOptions {
@@ -67,6 +93,8 @@ dependencies {
     implementation dependency.rxAndroid
 
     implementation dependency.archComponentsExtention
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     annotationProcessor dependency.archComponentsCompiler
 
     implementation dependency.dagger
@@ -74,16 +102,22 @@ dependencies {
 
     implementation dependency.rxAndroid
 
+    implementation dependency.rxPermission
+
     annotationProcessor dependency.androidBindingCompiler
 
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
-    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
     implementation 'com.google.code.gson:gson:2.8.2'
 
 

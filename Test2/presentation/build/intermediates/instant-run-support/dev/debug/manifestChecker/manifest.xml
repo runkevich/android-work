@@ -11,10 +11,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- To store the heap dumps and leak analysis results. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.runkevich8.gmail.app.App"
@@ -35,52 +34,40 @@
         </activity>
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextActivity"
-            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" />
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10"
-            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" />
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10_1"
-            android:parentActivityName="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10" />
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10_2"
-            android:parentActivityName="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10" />
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.user.UserActivity"
-            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.presentation.screens.main.MainActivity" />
         <activity
             android:name="com.runkevich8.gmail.presentation.screens.hw.hw11.ActivityToFrontHw11"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.classwork.classwork9.Classwork9Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.classwork.classwork7.Classwork7Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw9.Homework9Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw8.Homework8Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw7.Homework7Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw6.Homework6Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
 
         <receiver android:name="com.runkevich8.gmail.test.homework.hw5.WifiReceiver" >
             <intent-filter>
@@ -92,26 +79,20 @@
 
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw5.Homework5Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw4.Homework4Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw3.Homework3Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.homework.hw2.Homework2Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.homework.HomeworkMain" />
         <activity
             android:name="com.runkevich8.gmail.test.classwork.classwork2.Classwork2Activity"
-            android:parentActivityName="com.runkevich8.gmail.test.classwork.classwork1.Classwork1Activity" >
-        </activity>
-        <activity android:name="com.runkevich8.gmail.test.classwork.classwork6.Classwork6Activity" >
-        </activity>
+            android:parentActivityName="com.runkevich8.gmail.test.classwork.classwork1.Classwork1Activity" />
+        <activity android:name="com.runkevich8.gmail.test.classwork.classwork6.Classwork6Activity" />
 
         <receiver android:name="com.runkevich8.gmail.test.classwork.classwork5.MyReceiver" >
             <intent-filter>
@@ -121,6 +102,18 @@
 
         <service android:name="com.runkevich8.gmail.test.classwork.classwork5.MyService" />
         <service android:name="com.runkevich8.gmail.test.classwork.classwork5.MyIntentService" />
+
+        <!-- для работы с галереей на 8 андроиде -->
+        <provider
+            android:name="com.runkevich8.gmail.presentation.utils.MyFileProvider"
+            android:authorities="com.runkevich8.gmail.presentation.utils.MyFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_parths" />
+
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
             android:enabled="false"

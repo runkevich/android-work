@@ -19,6 +19,7 @@ public class AppSharedPrefs {
     }
 
     public void saveToken(String token){
+
         AppSharedPrefs.token = token;
     }
 
@@ -33,7 +34,6 @@ public class AppSharedPrefs {
     }
     //сюда приходят токены и обрабатываются (лучше отпраоять в рест сервис )
     // от презентейшен к домейну, затем к дате - просьба на данные
-
 
     // если не синглтон , то статик стринг
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,8 +15,11 @@ import android.view.View;
 import com.gmail.runkevich8.data.sharedprefs.AppSharedPrefs;
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.presentation.screens.user.list.UserRouter;
+import com.runkevich8.gmail.presentation.utils.ImageChooser;
 import com.runkevich8.gmail.test.R;
 import com.runkevich8.gmail.test.databinding.ActivityClasswork8Binding;
+
+import java.io.File;
 
 import javax.inject.Inject;
 
@@ -64,12 +68,28 @@ public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,Use
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ImageChooser.startCamera(UserActivity.this);
+                ImageChooser.getCameraFile(UserActivity.this);
             }
         });
-
-
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (resultCode == Activity.RESULT_OK) {
+            File file = ImageChooser.getImageFromResult(this, requestCode, resultCode, data);
+            if (file != null){
+               Log.e("OOO","File path = " + file.getAbsolutePath());
+            } else {
+                Log.e("OOO","OOO no file ");
+            }
+            //viewModel.userВыбралНовыйФайл
+            //дальнейшие действия с файлом этим
+            //super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.option_menu,menu);
@@ -87,8 +107,6 @@ public class UserActivity extends BaseMvvmActivity<ActivityClasswork8Binding,Use
         return super.onOptionsItemSelected(item);
     }
 
-
-    //
 }
 
 

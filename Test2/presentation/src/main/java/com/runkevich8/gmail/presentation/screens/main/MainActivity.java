@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.runkevich8.gmail.presentation.base.BaseMvvmActivity;
 import com.runkevich8.gmail.presentation.base.BaseViewModel;
 import com.runkevich8.gmail.presentation.base.Router;
+import com.runkevich8.gmail.presentation.notification.NewMessageNotification;
 import com.runkevich8.gmail.presentation.screens.hw.hw1.ExchangeTextActivity;
 import com.runkevich8.gmail.presentation.screens.hw.hw10.ActivityRetrofitHw10;
 import com.runkevich8.gmail.presentation.screens.hw.hw11.ActivityToFrontHw11;
@@ -56,7 +57,11 @@ public class MainActivity extends BaseMvvmActivity<HomeworkMainBinding, BaseView
         binding.hw11.setOnClickListener(this);
         binding.hw11Class.setOnClickListener(this);
 
+        NewMessageNotification.notify(this,"dgfrg",5);
+
     }
+
+
 
     @Override
     public void onClick(View view) {

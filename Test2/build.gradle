@@ -32,6 +32,9 @@ ext{
     androidBindingCompiler = '3.0.0'
     rxjavaVersion = '2.1.10'
     rxandroidVersion = '2.0.2'
+
+    rxpermissionVersion = '0.9.5@aar'
+
     gsonVersion = '2.8.2'
 
     okHttpVersion='3.10.0'
@@ -55,6 +58,8 @@ ext{
 
         rxAndroid:  "io.reactivex.rxjava2:rxandroid:$rxandroidVersion",
         rxjava2: "io.reactivex.rxjava2:rxjava:$rxjavaVersion",
+
+        rxPermission:"com.tbruyelle.rxpermissions2:rxpermissions:$rxpermissionVersion",
 
         retrofit :"com.squareup.retrofit2:retrofit:$retrofitVersion",
         retrofitConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
